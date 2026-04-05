@@ -3,6 +3,8 @@
 **TL;DR: Norton 360's NortonUI.exe uses an outdated Chromium 91 CEF engine with a misconfigured flag (`--disable-features=CalculateNativeWinOcclusion`) that causes its invisible background windows to steal foreground focus approximately every 60 seconds. This prevents display sleep and disrupts all user input. Killing NortonUI.exe completely eliminates the problem while Norton's core protection (NortonSvc.exe) continues running unaffected. This bug has been reported since late 2024 and remains unfixed as of version 26.3.10886.0 (March 2026).**
 
 \---
+https://github.com/litebito/windows-focus-steal-diagnostic/tree/main
+\---
 
 ## The Problem
 
