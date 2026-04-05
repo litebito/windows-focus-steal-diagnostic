@@ -5,6 +5,8 @@
 NortonUI.exe periodically activates invisible Chromium Embedded Framework (CEF) windows into the foreground, stealing focus from the user's active application approximately every 60 seconds. This causes input interruption, workflow disruption, and prevents Windows display sleep. The root cause is the `--disable-features=CalculateNativeWinOcclusion` flag in the CEF launch configuration combined with a periodic background timer.
 
 \---
+https://github.com/litebito/windows-focus-steal-diagnostic/tree/main
+\---
 
 ## Product Information
 
