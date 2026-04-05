@@ -1,0 +1,5 @@
+# Log output files
+*.csv
+FocusStealDetail_*.txt
+FocusStealLog_*.csv
+NortonDiagReport_*.txt
