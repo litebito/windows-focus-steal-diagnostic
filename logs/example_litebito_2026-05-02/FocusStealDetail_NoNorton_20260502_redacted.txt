@@ -1,0 +1,56 @@
+﻿===========================================================
+FOCUS-STEAL DIAGNOSTIC REPORT
+Generated: 2026-05-02 22:12:14
+Admin    : True
+Duration : 30 minutes
+===========================================================
+
+--- RUNNING SUSPECT PROCESSES AT START ---
+  [MEDIUM] PID=29412 AMDRSServ - C:\Program Files\AMD\CNext\CNext\AMDRSServ.exe
+  [HIGH] PID=18868 ctfmon - C:\WINDOWS\system32\ctfmon.exe
+  [MEDIUM] PID=7948 mDNSResponder - C:\Program Files\Bonjour\mDNSResponder.exe
+  [MEDIUM] PID=11616 Microsoft.CmdPal.Ext.PowerToys - C:\Users\[USER]\AppData\Local\PowerToys\Microsoft.CmdPal.Ext.PowerToys.exe
+  [MEDIUM] PID=4760 NortonSvc - 
+  [MEDIUM] PID=4760 NortonSvc - 
+  [MEDIUM] PID=15024 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=37468 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=37568 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=37592 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=8100 OneApp.IGCC.WinService - C:\WINDOWS\System32\DriverStore\FileRepository\igcc_dch.inf_amd64_734ca279c9cf8df2\OneApp.IGCC.WinService.exe
+  [MEDIUM] PID=11856 OpenConsole - C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.24.10921.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  [MEDIUM] PID=45268 OpenConsole - C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.24.10921.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  [MEDIUM] PID=19524 PowerToys - C:\Users\[USER]\AppData\Local\PowerToys\PowerToys.exe
+  [MEDIUM] PID=5484 PowerToys.AdvancedPaste - C:\Users\[USER]\AppData\Local\PowerToys\WinUI3Apps\PowerToys.AdvancedPaste.exe
+  [MEDIUM] PID=25460 PowerToys.ColorPickerUI - C:\Users\[USER]\AppData\Local\PowerToys\PowerToys.ColorPickerUI.exe
+  [MEDIUM] PID=25728 PowerToys.CropAndLock - C:\Users\[USER]\AppData\Local\PowerToys\PowerToys.CropAndLock.exe
+  [MEDIUM] PID=25856 PowerToys.FancyZones - C:\Users\[USER]\AppData\Local\PowerToys\PowerToys.FancyZones.exe
+  [MEDIUM] PID=25856 PowerToys.FancyZones - C:\Users\[USER]\AppData\Local\PowerToys\PowerToys.FancyZones.exe
+  [MEDIUM] PID=14120 PowerToys.Peek.UI - C:\Users\[USER]\AppData\Local\PowerToys\WinUI3Apps\PowerToys.Peek.UI.exe
+  [MEDIUM] PID=28748 PowerToys.PowerLauncher - C:\Users\[USER]\AppData\Local\PowerToys\PowerToys.PowerLauncher.exe
+  [MEDIUM] PID=24536 PowerToys.QuickAccess - C:\Users\[USER]\AppData\Local\PowerToys\WinUI3Apps\PowerToys.QuickAccess.exe
+  [MEDIUM] PID=4036 RadeonSoftware - C:\Program Files\AMD\CNext\CNext\Radeonsoftware.exe
+  [MEDIUM] PID=4036 RadeonSoftware - C:\Program Files\AMD\CNext\CNext\Radeonsoftware.exe
+  [LOW] PID=16512 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=17580 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=20256 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=25240 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=38208 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=39980 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=41420 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=45656 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=52456 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=57052 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=17320 SearchHost - C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+  [LOW] PID=24848 ShellExperienceHost - C:\WINDOWS\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe
+  [MEDIUM] PID=11504 unsecapp - C:\WINDOWS\system32\wbem\unsecapp.exe
+  [MEDIUM] PID=18244 unsecapp - C:\WINDOWS\system32\wbem\unsecapp.exe
+  [MEDIUM] PID=8296 VpnSvc - C:\Program Files\Norton\Suite\VpnSvc.exe
+  [MEDIUM] PID=18772 WidgetService - C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntime_1.6.14.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe
+  [MEDIUM] PID=7780 WMIRegistrationService - C:\WINDOWS\System32\DriverStore\FileRepository\mewmiprov.inf_amd64_d51901c26227fb29\WMIRegistrationService.exe
+
+--- FOCUS CHANGE LOG ---
+[22:12:28.301] FOREGROUND | PID=55288 (RemoteDesktopManager) | Class=WindowsForms10.Window.8.app.0.3d893c_r3_ad1 | Title=Remote Desktop Manager [app41-dev01] | Visible=True | Parent=explorer(PID:12688)
+[22:14:08.453] FOREGROUND | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964)
+[22:17:05.087] FOREGROUND | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964)
+[22:19:19.278] FOREGROUND | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964)
+[22:20:32.610] FOREGROUND | PID=65440 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:12688)

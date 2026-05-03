@@ -1,11 +1,22 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-    Advanced Focus-Steal Diagnostic Tool for Windows 11
+    Advanced Focus-Steal Diagnostic Tool for Windows 10/11 (v1.2)
 .DESCRIPTION
     Monitors foreground window changes using SetWinEventHook (EVENT_SYSTEM_FOREGROUND),
     captures detailed process information, correlates with known problematic applications.
     Run as Administrator for full detail (process command lines, parent PIDs, etc.)
+.NOTES
+    v1.2 changes:
+      - Fixed: callbacks no longer fire after script stops (shutdown flag added)
+      - Added: per-process timing pattern analysis (intervals, periodicity detection)
+      - Added: per-suspect cumulative event log section in summary
+      - Added: rapid-fire burst detection (multiple events within 500ms)
+      - Added: dedicated Norton CEF window tracking (CefHeaderWindow / Chrome_WidgetWin_0)
+      - Added: progress heartbeat every 5 minutes during monitoring
+      - Added: focus duration tracking (how long each foreground window held focus)
+      - Added: invisible-window cluster detection (consecutive hidden activations)
+      - Cleaned: suspect list now contains only widely documented focus stealers
 .EXAMPLE
     .\FocusStealDiagnostic.ps1 -DurationMinutes 30
     .\FocusStealDiagnostic.ps1 -DurationMinutes 60 -LogPath "C:\Temp\focus_log.csv"
@@ -13,8 +24,8 @@
 
 param(
     [int]$DurationMinutes = 30,
-    [string]$LogPath = "$env:USERPROFILE\Desktop\FocusStealLog_$(Get-Date -Format 'yyyyMMdd_HHmmss').csv",
-    [string]$DetailLogPath = "$env:USERPROFILE\Desktop\FocusStealDetail_$(Get-Date -Format 'yyyyMMdd_HHmmss').txt",
+    [string]$LogPath = (Join-Path $PSScriptRoot "FocusStealLog_$(Get-Date -Format 'yyyyMMdd_HHmmss').csv"),
+    [string]$DetailLogPath = (Join-Path $PSScriptRoot "FocusStealDetail_$(Get-Date -Format 'yyyyMMdd_HHmmss').txt"),
     [switch]$IncludeScheduledTaskCorrelation,
     [switch]$Quiet
 )
@@ -94,8 +105,12 @@ public class FocusMonitor
     public const int GWL_EXSTYLE = -20;
     public const uint GA_ROOT = 2;
 
+    // -- Shutdown flag: when set, the callback ignores all events --
+    public static volatile bool ShutdownRequested = false;
+
     public static List<FocusEvent> Events = new List<FocusEvent>();
     public static WinEventDelegate Delegate;
+    private static readonly object _lockObj = new object();
 
     public class FocusEvent
     {
@@ -104,6 +119,9 @@ public class FocusMonitor
         public uint ProcessId;
         public string ProcessName;
         public string ProcessPath;
+        public string ProductVersion;
+        public string FileVersion;
+        public string CompanyName;
         public string WindowTitle;
         public string WindowClass;
         public string ParentProcessName;
@@ -114,11 +132,13 @@ public class FocusMonitor
         public string OwnerInfo;
         public string CommandLine;
         public string EventType;
+        public double SecondsSincePrevious;
     }
 
-    public static string GetWindowInfo(IntPtr hwnd, string eventType)
+    public static FocusEvent BuildEvent(IntPtr hwnd, string eventType)
     {
-        if (hwnd == IntPtr.Zero) return "";
+        if (ShutdownRequested) return null;
+        if (hwnd == IntPtr.Zero) return null;
 
         uint pid = 0;
         GetWindowThreadProcessId(hwnd, out pid);
@@ -141,6 +161,9 @@ public class FocusMonitor
 
         string processName = "";
         string processPath = "";
+        string productVersion = "";
+        string fileVersion = "";
+        string companyName = "";
         string parentProcName = "";
         uint parentPid = 0;
         string cmdLine = "";
@@ -149,7 +172,18 @@ public class FocusMonitor
         {
             Process proc = Process.GetProcessById((int)pid);
             processName = proc.ProcessName;
-            try { processPath = proc.MainModule.FileName; } catch { processPath = "ACCESS_DENIED"; }
+            try
+            {
+                processPath = proc.MainModule.FileName;
+                var fvi = proc.MainModule.FileVersionInfo;
+                productVersion = fvi.ProductVersion ?? "";
+                fileVersion = fvi.FileVersion ?? "";
+                companyName = fvi.CompanyName ?? "";
+            }
+            catch
+            {
+                processPath = "ACCESS_DENIED";
+            }
             try { cmdLine = GetCommandLine((int)pid); } catch { cmdLine = "ACCESS_DENIED"; }
         }
         catch { processName = "EXITED_PID_" + pid; }
@@ -186,6 +220,9 @@ public class FocusMonitor
             ProcessId = pid,
             ProcessName = processName,
             ProcessPath = processPath,
+            ProductVersion = productVersion,
+            FileVersion = fileVersion,
+            CompanyName = companyName,
             WindowTitle = sbTitle.ToString(),
             WindowClass = sbClass.ToString(),
             ParentProcessName = parentProcName,
@@ -195,17 +232,32 @@ public class FocusMonitor
             WindowRect = rectStr,
             OwnerInfo = ownerInfo,
             CommandLine = cmdLine,
-            EventType = eventType
+            EventType = eventType,
+            SecondsSincePrevious = 0
         };
 
-        Events.Add(evt);
+        lock (_lockObj)
+        {
+            if (Events.Count > 0)
+            {
+                evt.SecondsSincePrevious = (evt.Timestamp - Events[Events.Count - 1].Timestamp).TotalSeconds;
+            }
+            Events.Add(evt);
+        }
+        return evt;
+    }
 
-        return "[" + evt.Timestamp.ToString("HH:mm:ss.fff") + "] " + eventType +
-            " | PID=" + pid + " (" + processName + ")" +
-            " | Class=" + sbClass.ToString() +
-            " | Title=" + sbTitle.ToString() +
-            " | Visible=" + isVisible +
-            " | Parent=" + parentProcName + "(PID:" + parentPid + ")";
+    public static string FormatEvent(FocusEvent evt)
+    {
+        if (evt == null) return "";
+        return "[" + evt.Timestamp.ToString("HH:mm:ss.fff") + "] " + evt.EventType +
+            " | dt=" + evt.SecondsSincePrevious.ToString("F2") + "s" +
+            " | PID=" + evt.ProcessId + " (" + evt.ProcessName + ")" +
+            " | Class=" + evt.WindowClass +
+            " | Title=" + evt.WindowTitle +
+            " | Visible=" + evt.IsVisible +
+            " | Parent=" + evt.ParentProcessName + "(PID:" + evt.ParentProcessId + ")" +
+            (string.IsNullOrEmpty(evt.ProductVersion) ? "" : " | Ver=" + evt.ProductVersion);
     }
 
     [DllImport("ntdll.dll")]
@@ -263,7 +315,7 @@ public class FocusMonitor
 if (-not $Quiet) {
     Write-Host ""
     Write-Host "=========================================================" -ForegroundColor Cyan
-    Write-Host "  FOCUS-STEAL DIAGNOSTIC TOOL v1.1" -ForegroundColor Cyan
+    Write-Host "  FOCUS-STEAL DIAGNOSTIC TOOL v1.2" -ForegroundColor Cyan
     Write-Host "  Windows 10/11 Deep Diagnostics" -ForegroundColor Cyan
     Write-Host "=========================================================" -ForegroundColor Cyan
     Write-Host ""
@@ -285,28 +337,44 @@ catch {
     }
 }
 
-# -- Known focus-stealing applications (community-reported) --
+# Reset shutdown flag if module was already loaded from prior run
+[FocusMonitor]::ShutdownRequested = $false
+
+# -- Known focus-stealing applications (community-documented) --
 # Add your own entries to this hashtable if needed.
-# Risk levels: HIGH = confirmed focus stealer, MEDIUM = known to cause issues,
-#              LOW = occasionally involved but usually benign.
+# Risk: HIGH = confirmed focus stealer | MEDIUM = known to cause issues | LOW = usually benign
 $SuspectApps = @{
-    # -- Confirmed focus stealers (community-documented) --
-    'nortonui'             = @{ Risk = 'HIGH';   Reason = 'CEF background timer activates invisible windows ~every 60s. Reported unfixed since late 2024.' }
-    'ctfmon'               = @{ Risk = 'HIGH';   Reason = 'CTF Loader (Text Services Framework) - often triggered by other apps via MSCTFIME UI.' }
-    'nlltoolssvc'          = @{ Risk = 'HIGH';   Reason = 'Norton Tools service - reported as focus stealer alongside NortonUI.' }
-    # -- Antivirus / security software --
-    'avgui'                = @{ Risk = 'MEDIUM'; Reason = 'AVG UI - shares CEF codebase with Norton (Gen Digital). May exhibit same behavior.' }
-    'avastui'              = @{ Risk = 'MEDIUM'; Reason = 'Avast UI - shares CEF codebase with Norton (Gen Digital). May exhibit same behavior.' }
-    'mcafee'               = @{ Risk = 'MEDIUM'; Reason = 'McAfee notifications and WebAdvisor can steal focus.' }
-    'mcuicnt'              = @{ Risk = 'MEDIUM'; Reason = 'McAfee UI container process.' }
-    # -- Overlays and game bars --
-    'gamebar'              = @{ Risk = 'MEDIUM'; Reason = 'Xbox Game Bar overlay activation.' }
-    'gamebarpresencewriter'= @{ Risk = 'LOW';    Reason = 'Game Bar background presence writer.' }
+    # -- Confirmed focus stealers --
+    'nortonui'              = @{ Risk = 'HIGH';   Reason = 'CEF background timer activates invisible windows. Reported unfixed since late 2024.' }
+    'ctfmon'                = @{ Risk = 'HIGH';   Reason = 'CTF Loader (Text Services Framework) - often triggered by other apps via MSCTFIME UI.' }
+    'nlltoolssvc'           = @{ Risk = 'HIGH';   Reason = 'Norton Tools service - reported alongside NortonUI as focus stealer.' }
+    # -- Antivirus / security software (CEF-based UIs) --
+    'avgui'                 = @{ Risk = 'MEDIUM'; Reason = 'AVG UI - shares CEF codebase with Norton (Gen Digital).' }
+    'avastui'               = @{ Risk = 'MEDIUM'; Reason = 'Avast UI - shares CEF codebase with Norton (Gen Digital).' }
+    'mcafee'                = @{ Risk = 'MEDIUM'; Reason = 'McAfee notifications and WebAdvisor can steal focus.' }
+    'mcuicnt'               = @{ Risk = 'MEDIUM'; Reason = 'McAfee UI container.' }
+    # -- Overlays --
+    'gamebar'               = @{ Risk = 'MEDIUM'; Reason = 'Xbox Game Bar overlay activation.' }
+    'gamebarpresencewriter' = @{ Risk = 'LOW';    Reason = 'Game Bar background presence writer.' }
     # -- Windows components --
-    'widgets'              = @{ Risk = 'MEDIUM'; Reason = 'Windows Widgets - known to occasionally steal focus on content refresh.' }
-    'searchhost'           = @{ Risk = 'LOW';    Reason = 'Windows Search - indexer may briefly activate.' }
-    'shellexperiencehost'  = @{ Risk = 'LOW';    Reason = 'Shell Experience Host - Start menu/taskbar/notification area.' }
-    'runtimebroker'        = @{ Risk = 'LOW';    Reason = 'Runtime Broker - manages UWP app permissions.' }
+    'widgets'               = @{ Risk = 'MEDIUM'; Reason = 'Windows Widgets - occasional focus steal on content refresh.' }
+    'searchhost'            = @{ Risk = 'LOW';    Reason = 'Windows Search indexer.' }
+    'shellexperiencehost'   = @{ Risk = 'LOW';    Reason = 'Shell Experience Host - Start menu/taskbar/notification area.' }
+    'runtimebroker'         = @{ Risk = 'LOW';    Reason = 'Runtime Broker for UWP apps.' }
+}
+
+# -- Norton-specific window classes (for CEF tracking) --
+$NortonCefWindowClasses = @('CefHeaderWindow', 'Chrome_WidgetWin_0', 'Chrome_WidgetWin_1', 'Chrome_RenderWidgetHostHWND')
+
+function Test-IsSuspectProcess {
+    param([string]$ProcessName)
+    $nameLower = $ProcessName.ToLower()
+    foreach ($suspect in $SuspectApps.Keys) {
+        if ($nameLower -like "*$suspect*") {
+            return $SuspectApps[$suspect]
+        }
+    }
+    return $null
 }
 
 # -- Pre-scan: identify running suspect processes --
@@ -318,16 +386,23 @@ $runningProcs = Get-Process -ErrorAction SilentlyContinue | Select-Object -Prope
 $foundSuspects = @()
 
 foreach ($proc in $runningProcs) {
-    $nameLower = $proc.ProcessName.ToLower()
-    foreach ($suspect in $SuspectApps.Keys) {
-        if ($nameLower -like "*$suspect*") {
-            $foundSuspects += [PSCustomObject]@{
-                PID         = $proc.Id
-                ProcessName = $proc.ProcessName
-                Path        = $proc.Path
-                Risk        = $SuspectApps[$suspect].Risk
-                Reason      = $SuspectApps[$suspect].Reason
+    $suspectInfo = Test-IsSuspectProcess -ProcessName $proc.ProcessName
+    if ($suspectInfo) {
+        $verInfo = ""
+        if ($proc.Path -and (Test-Path $proc.Path -ErrorAction SilentlyContinue)) {
+            try {
+                $vi = (Get-Item $proc.Path).VersionInfo
+                $verInfo = $vi.ProductVersion
             }
+            catch { }
+        }
+        $foundSuspects += [PSCustomObject]@{
+            PID            = $proc.Id
+            ProcessName    = $proc.ProcessName
+            Path           = $proc.Path
+            ProductVersion = $verInfo
+            Risk           = $suspectInfo.Risk
+            Reason         = $suspectInfo.Reason
         }
     }
 }
@@ -341,7 +416,8 @@ if (-not $Quiet -and $foundSuspects.Count -gt 0) {
             'MEDIUM' { 'Yellow' }
             default  { 'Gray' }
         }
-        $line = "  [{0}] PID={1} {2}" -f $s.Risk, $s.PID, $s.ProcessName
+        $verSuffix = if ($s.ProductVersion) { " v$($s.ProductVersion)" } else { "" }
+        $line = "  [{0}] PID={1} {2}{3}" -f $s.Risk, $s.PID, $s.ProcessName, $verSuffix
         Write-Host $line -ForegroundColor $riskColor
         Write-Host "          $($s.Reason)" -ForegroundColor DarkGray
     }
@@ -393,7 +469,7 @@ if ($IncludeScheduledTaskCorrelation) {
 # -- Initialize detail log --
 $startInfo = @()
 $startInfo += "==========================================================="
-$startInfo += "FOCUS-STEAL DIAGNOSTIC REPORT"
+$startInfo += "FOCUS-STEAL DIAGNOSTIC REPORT (v1.2)"
 $startInfo += "Generated: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
 $startInfo += "Computer : $env:COMPUTERNAME"
 $startInfo += "User     : $env:USERNAME"
@@ -403,10 +479,11 @@ $startInfo += "==========================================================="
 $startInfo += ""
 $startInfo += "--- RUNNING SUSPECT PROCESSES AT START ---"
 foreach ($s in $foundSuspects) {
-    $startInfo += "  [$($s.Risk)] PID=$($s.PID) $($s.ProcessName) - $($s.Path)"
+    $verSuffix = if ($s.ProductVersion) { " v$($s.ProductVersion)" } else { "" }
+    $startInfo += "  [$($s.Risk)] PID=$($s.PID) $($s.ProcessName)$verSuffix - $($s.Path)"
 }
 $startInfo += ""
-$startInfo += "--- FOCUS CHANGE LOG ---"
+$startInfo += "--- FOCUS CHANGE LOG (dt = seconds since previous event) ---"
 
 $startInfo | Out-File -FilePath $DetailLogPath -Encoding UTF8
 
@@ -414,11 +491,16 @@ $startInfo | Out-File -FilePath $DetailLogPath -Encoding UTF8
 $script:lastFgHwnd = [IntPtr]::Zero
 $script:lastFgTime = [DateTime]::MinValue
 $script:eventCount = 0
-$script:stealCount = 0
+$script:rapidStealCount = 0
+$script:burstCount = 0
+$script:nextHeartbeat = (Get-Date).AddMinutes(5)
+$script:startTime = Get-Date
 
 [FocusMonitor]::Delegate = [FocusMonitor+WinEventDelegate]{
     param($hWinEventHook, $eventType, $hwnd, $idObject, $idChild, $dwEventThread, $dwmsEventTime)
 
+    # Hard exit if shutdown was requested
+    if ([FocusMonitor]::ShutdownRequested) { return }
     if ($hwnd -eq [IntPtr]::Zero) { return }
 
     $evtName = switch ($eventType) {
@@ -429,18 +511,23 @@ $script:stealCount = 0
 
     $currentFg = [FocusMonitor]::GetForegroundWindow()
     if ($eventType -eq 0x0003 -or $currentFg -ne $script:lastFgHwnd) {
-        $info = [FocusMonitor]::GetWindowInfo($hwnd, $evtName)
 
-        if ($info) {
+        $evt = [FocusMonitor]::BuildEvent($hwnd, $evtName)
+        if ($null -eq $evt) { return }
+        if ([FocusMonitor]::ShutdownRequested) { return }
+
+        $info = [FocusMonitor]::FormatEvent($evt)
+
+        if ($info -and -not [FocusMonitor]::ShutdownRequested) {
             if (-not $Quiet) {
-                $lastEvent = [FocusMonitor]::Events | Select-Object -Last 1
-                $procName = ""
-                if ($lastEvent) { $procName = $lastEvent.ProcessName.ToLower() }
+                $procName = $evt.ProcessName.ToLower()
 
                 $color = 'White'
                 $suffix = ""
+                $isSuspect = $false
                 foreach ($suspect in $SuspectApps.Keys) {
                     if ($procName -like "*$suspect*") {
+                        $isSuspect = $true
                         $color = switch ($SuspectApps[$suspect].Risk) {
                             'HIGH'   { 'Red' }
                             'MEDIUM' { 'Yellow' }
@@ -451,15 +538,27 @@ $script:stealCount = 0
                     }
                 }
 
+                # Norton CEF window class detection
+                if ($evt.WindowClass -in $NortonCefWindowClasses -and $isSuspect) {
+                    $suffix += " [CEF]"
+                }
+
+                # Invisible-window flag
+                if (-not $evt.IsVisible) {
+                    $suffix += " [INVISIBLE]"
+                    if (-not $isSuspect) { $color = 'DarkRed' }
+                }
+
+                # MSCTF/IME marker
                 if ($info -like "*MSCTFIME*" -or $info -like "*MSCTF*") {
                     $color = 'Magenta'
-                    $suffix = " << TSF/IME RELATED"
+                    $suffix += " [TSF/IME]"
                 }
 
                 Write-Host ($info + $suffix) -ForegroundColor $color
             }
 
-            $info | Out-File -FilePath $DetailLogPath -Append -Encoding UTF8
+            try { $info | Out-File -FilePath $DetailLogPath -Append -Encoding UTF8 } catch { }
         }
 
         $timeSinceLast = if ($script:lastFgTime -ne [DateTime]::MinValue) {
@@ -468,7 +567,10 @@ $script:stealCount = 0
         else { [TimeSpan]::Zero }
 
         if ($timeSinceLast.TotalSeconds -gt 0 -and $timeSinceLast.TotalSeconds -lt 3) {
-            $script:stealCount++
+            $script:rapidStealCount++
+        }
+        if ($timeSinceLast.TotalMilliseconds -gt 0 -and $timeSinceLast.TotalMilliseconds -lt 500) {
+            $script:burstCount++
         }
 
         $script:lastFgHwnd = $currentFg
@@ -510,6 +612,7 @@ if (-not $Quiet) {
     Write-Host ""
     Write-Host "  Work normally. Focus changes will appear below:" -ForegroundColor Cyan
     Write-Host "  (RED=high-risk, YELLOW=medium-risk, MAGENTA=TSF/IME)" -ForegroundColor Cyan
+    Write-Host "  Press Ctrl+C to stop early." -ForegroundColor Cyan
     Write-Host "  ---------------------------------------------------------" -ForegroundColor DarkGray
 }
 
@@ -517,41 +620,92 @@ if (-not $Quiet) {
 $endTime = (Get-Date).AddMinutes($DurationMinutes)
 Add-Type -AssemblyName System.Windows.Forms -ErrorAction SilentlyContinue
 
-while ((Get-Date) -lt $endTime) {
-    [System.Windows.Forms.Application]::DoEvents()
-    Start-Sleep -Milliseconds 50
+try {
+    while ((Get-Date) -lt $endTime) {
+        [System.Windows.Forms.Application]::DoEvents()
+        Start-Sleep -Milliseconds 50
+
+        # Heartbeat every 5 minutes
+        if ((Get-Date) -ge $script:nextHeartbeat -and -not $Quiet) {
+            $elapsed = ((Get-Date) - $script:startTime).TotalMinutes
+            $remaining = ($endTime - (Get-Date)).TotalMinutes
+            $currentEvents = [FocusMonitor]::Events.Count
+            Write-Host ""
+            Write-Host "  [HEARTBEAT $(Get-Date -Format 'HH:mm:ss')] Elapsed: $([math]::Round($elapsed, 1))min | Remaining: $([math]::Round($remaining, 1))min | Events captured: $currentEvents" -ForegroundColor Cyan
+            Write-Host ""
+            $script:nextHeartbeat = (Get-Date).AddMinutes(5)
+        }
+    }
+}
+finally {
+    # -- CRITICAL: signal the C# layer to ignore further callbacks --
+    [FocusMonitor]::ShutdownRequested = $true
+
+    # -- Cleanup hooks (do this before message pump drain) --
+    if ($hook1 -ne [IntPtr]::Zero) { [FocusMonitor]::UnhookWinEvent($hook1) | Out-Null }
+    if ($hook2 -ne [IntPtr]::Zero) { [FocusMonitor]::UnhookWinEvent($hook2) | Out-Null }
+
+    # -- Drain pending messages so any in-flight callbacks complete and see the flag --
+    for ($i = 0; $i -lt 10; $i++) {
+        [System.Windows.Forms.Application]::DoEvents()
+        Start-Sleep -Milliseconds 50
+    }
+
+    Write-Host ""
+    if (-not $Quiet) {
+        Write-Host "  [OK] Hooks unregistered. Monitoring stopped at $(Get-Date -Format 'HH:mm:ss')." -ForegroundColor Green
+    }
 }
 
-# -- Cleanup hooks --
-[FocusMonitor]::UnhookWinEvent($hook1) | Out-Null
-if ($hook2 -ne [IntPtr]::Zero) {
-    [FocusMonitor]::UnhookWinEvent($hook2) | Out-Null
-}
+# -- Snapshot events (after shutdown to ensure no concurrent writes) --
+$events = @([FocusMonitor]::Events)
 
 # -- Export CSV --
-$events = [FocusMonitor]::Events
-
 if ($events.Count -gt 0) {
     $csvData = $events | ForEach-Object {
         [PSCustomObject]@{
-            Timestamp     = $_.Timestamp.ToString('yyyy-MM-dd HH:mm:ss.fff')
-            EventType     = $_.EventType
-            PID           = $_.ProcessId
-            ProcessName   = $_.ProcessName
-            ProcessPath   = $_.ProcessPath
-            WindowTitle   = $_.WindowTitle
-            WindowClass   = $_.WindowClass
-            ParentPID     = $_.ParentProcessId
-            ParentProcess = $_.ParentProcessName
-            IsVisible     = $_.IsVisible
-            WindowStyle   = $_.WindowStyle
-            WindowRect    = $_.WindowRect
-            OwnerInfo     = $_.OwnerInfo
-            CommandLine   = $_.CommandLine
+            Timestamp            = $_.Timestamp.ToString('yyyy-MM-dd HH:mm:ss.fff')
+            EventType            = $_.EventType
+            SecondsSincePrevious = [math]::Round($_.SecondsSincePrevious, 3)
+            PID                  = $_.ProcessId
+            ProcessName          = $_.ProcessName
+            ProcessPath          = $_.ProcessPath
+            ProductVersion       = $_.ProductVersion
+            FileVersion          = $_.FileVersion
+            CompanyName          = $_.CompanyName
+            WindowTitle          = $_.WindowTitle
+            WindowClass          = $_.WindowClass
+            ParentPID            = $_.ParentProcessId
+            ParentProcess        = $_.ParentProcessName
+            IsVisible            = $_.IsVisible
+            WindowStyle          = $_.WindowStyle
+            WindowRect           = $_.WindowRect
+            OwnerInfo            = $_.OwnerInfo
+            CommandLine          = $_.CommandLine
         }
     }
 
     $csvData | Export-Csv -Path $LogPath -NoTypeInformation -Encoding UTF8
+}
+
+# -- Helper: timing analysis function --
+function Get-TimingStats {
+    param($Timestamps)
+    if ($Timestamps.Count -lt 2) { return $null }
+    $intervals = @()
+    for ($i = 1; $i -lt $Timestamps.Count; $i++) {
+        $intervals += ($Timestamps[$i] - $Timestamps[$i - 1]).TotalSeconds
+    }
+    $sortedIntervals = @($intervals | Sort-Object)
+    $medianIdx = [math]::Floor($sortedIntervals.Count / 2)
+    return [PSCustomObject]@{
+        Count    = $Timestamps.Count
+        Avg      = [math]::Round(($intervals | Measure-Object -Average).Average, 2)
+        Median   = [math]::Round($sortedIntervals[$medianIdx], 2)
+        Min      = [math]::Round(($intervals | Measure-Object -Minimum).Minimum, 2)
+        Max      = [math]::Round(($intervals | Measure-Object -Maximum).Maximum, 2)
+        StdDev   = [math]::Round([math]::Sqrt((($intervals | ForEach-Object { [math]::Pow($_ - (($intervals | Measure-Object -Average).Average), 2) } | Measure-Object -Sum).Sum / $intervals.Count)), 2)
+    }
 }
 
 # -- Analysis and Summary --
@@ -564,8 +718,8 @@ if (-not $Quiet) {
     Write-Host "  =========================================================" -ForegroundColor Cyan
     Write-Host ""
     Write-Host "  Total focus change events : $($events.Count)" -ForegroundColor White
-    $stealColor = if ($script:stealCount -gt 5) { 'Red' } else { 'White' }
-    Write-Host "  Rapid focus changes (<3s) : $($script:stealCount)" -ForegroundColor $stealColor
+    Write-Host "  Rapid focus changes (<3s) : $($script:rapidStealCount)" -ForegroundColor $(if ($script:rapidStealCount -gt 5) { 'Red' } else { 'White' })
+    Write-Host "  Bursts (<500ms apart)     : $($script:burstCount)" -ForegroundColor $(if ($script:burstCount -gt 3) { 'Red' } else { 'White' })
     Write-Host ""
 }
 
@@ -576,13 +730,10 @@ if ($events.Count -gt 0) {
     if (-not $Quiet) {
         Write-Host "  --- FOCUS EVENTS BY PROCESS ---" -ForegroundColor Yellow
         foreach ($pg in ($processGroups | Select-Object -First 15)) {
-            $isSuspect = $false
-            foreach ($suspect in $SuspectApps.Keys) {
-                if ($pg.Name.ToLower() -like "*$suspect*") { $isSuspect = $true; break }
-            }
+            $suspectInfo = Test-IsSuspectProcess -ProcessName $pg.Name
             $marker = ""
-            if ($isSuspect) { $marker = " << SUSPECT" }
-            $pgColor = if ($isSuspect) { 'Red' } else { 'White' }
+            if ($suspectInfo) { $marker = " << SUSPECT [$($suspectInfo.Risk)]" }
+            $pgColor = if ($suspectInfo) { 'Red' } else { 'White' }
             $pgLine = "    {0,-30} : {1,4} events{2}" -f $pg.Name, $pg.Count, $marker
             Write-Host $pgLine -ForegroundColor $pgColor
         }
@@ -596,54 +747,85 @@ if ($events.Count -gt 0) {
         Write-Host "  --- FOCUS EVENTS BY WINDOW CLASS ---" -ForegroundColor Yellow
         foreach ($cg in ($classGroups | Select-Object -First 15)) {
             $isIME = ($cg.Name -like "*MSCTF*") -or ($cg.Name -like "*IME*") -or ($cg.Name -like "*CTF*")
+            $isCef = $cg.Name -in $NortonCefWindowClasses
             $marker = ""
-            if ($isIME) { $marker = " << TSF/IME" }
-            $cgColor = if ($isIME) { 'Magenta' } else { 'White' }
+            if ($isIME) { $marker += " [TSF/IME]" }
+            if ($isCef) { $marker += " [CEF]" }
+            $cgColor = if ($isIME) { 'Magenta' } elseif ($isCef) { 'Red' } else { 'White' }
             $cgLine = "    {0,-30} : {1,4} events{2}" -f $cg.Name, $cg.Count, $marker
             Write-Host $cgLine -ForegroundColor $cgColor
         }
         Write-Host ""
     }
 
-    # Timing pattern analysis for IME events
-    if ($events.Count -gt 2) {
-        $imeTimestamps = @($events |
-            Where-Object { ($_.WindowClass -like "*MSCTF*") -or ($_.WindowClass -like "*IME*") } |
-            ForEach-Object { $_.Timestamp })
+    # -- PER-SUSPECT TIMING ANALYSIS (key new feature) --
+    $suspectProcessNames = @($processGroups | Where-Object {
+        Test-IsSuspectProcess -ProcessName $_.Name
+    } | ForEach-Object { $_.Name })
 
-        if ($imeTimestamps.Count -gt 2) {
-            $intervals = @()
-            for ($i = 1; $i -lt $imeTimestamps.Count; $i++) {
-                $intervals += ($imeTimestamps[$i] - $imeTimestamps[$i - 1]).TotalSeconds
-            }
+    if ($suspectProcessNames.Count -gt 0 -and -not $Quiet) {
+        Write-Host "  --- PER-SUSPECT TIMING ANALYSIS ---" -ForegroundColor Yellow
+        foreach ($sp in $suspectProcessNames) {
+            $timestamps = @($events | Where-Object { $_.ProcessName -eq $sp } | ForEach-Object { $_.Timestamp })
+            $stats = Get-TimingStats -Timestamps $timestamps
+            if ($stats -and $stats.Count -ge 2) {
+                Write-Host "    $sp ($($stats.Count) events):" -ForegroundColor Red
+                Write-Host "      Avg interval : $($stats.Avg)s | Median: $($stats.Median)s | StdDev: $($stats.StdDev)s" -ForegroundColor Red
+                Write-Host "      Min: $($stats.Min)s | Max: $($stats.Max)s" -ForegroundColor Red
 
-            $avgInterval = ($intervals | Measure-Object -Average).Average
-            $sortedIntervals = @($intervals | Sort-Object)
-            $medianIdx = [math]::Floor($sortedIntervals.Count / 2)
-            $medianInterval = $sortedIntervals[$medianIdx]
-            $minInterval = ($intervals | Measure-Object -Minimum).Minimum
-            $maxInterval = ($intervals | Measure-Object -Maximum).Maximum
-
-            if (-not $Quiet) {
-                Write-Host "  --- TSF/IME TIMING PATTERN ---" -ForegroundColor Magenta
-                Write-Host "    TSF/IME focus events : $($imeTimestamps.Count)" -ForegroundColor Magenta
-                Write-Host "    Average interval     : $([math]::Round($avgInterval, 1)) seconds" -ForegroundColor Magenta
-                Write-Host "    Median interval      : $([math]::Round($medianInterval, 1)) seconds" -ForegroundColor Magenta
-                Write-Host "    Min interval         : $([math]::Round($minInterval, 1)) seconds" -ForegroundColor Magenta
-                Write-Host "    Max interval         : $([math]::Round($maxInterval, 1)) seconds" -ForegroundColor Magenta
-                Write-Host ""
+                # Periodicity verdict (low StdDev relative to avg = clear timer)
+                if ($stats.Avg -gt 0 -and ($stats.StdDev / $stats.Avg) -lt 0.3) {
+                    Write-Host "      *** STRONG PERIODICITY DETECTED *** (likely a timer-driven steal)" -ForegroundColor Red
+                }
+                elseif ($stats.Avg -gt 0 -and ($stats.StdDev / $stats.Avg) -lt 0.6) {
+                    Write-Host "      *** MODERATE PERIODICITY *** (possibly timer-driven with jitter)" -ForegroundColor Yellow
+                }
             }
         }
+        Write-Host ""
     }
 
     # Invisible windows (biggest red flag)
     $invisibleEvents = @($events | Where-Object { -not $_.IsVisible })
     if ($invisibleEvents.Count -gt 0 -and -not $Quiet) {
         Write-Host "  --- INVISIBLE WINDOWS STEALING FOCUS (RED FLAG!) ---" -ForegroundColor Red
+        $invByProc = $invisibleEvents | Group-Object ProcessName | Sort-Object Count -Descending
+        foreach ($ip in $invByProc) {
+            Write-Host "    $($ip.Name): $($ip.Count) invisible activations" -ForegroundColor Red
+            foreach ($cg in ($ip.Group | Group-Object WindowClass | Sort-Object Count -Descending | Select-Object -First 3)) {
+                Write-Host "      - $($cg.Name): $($cg.Count)" -ForegroundColor DarkRed
+            }
+        }
+        Write-Host ""
+
+        Write-Host "  First 10 invisible-window events:" -ForegroundColor Red
         foreach ($inv in ($invisibleEvents | Select-Object -First 10)) {
             $invTime = $inv.Timestamp.ToString('HH:mm:ss.fff')
-            Write-Host "    [$invTime] $($inv.ProcessName) - Class: $($inv.WindowClass)" -ForegroundColor Red
-            Write-Host "      Path: $($inv.ProcessPath)" -ForegroundColor DarkRed
+            $verSuffix = if ($inv.ProductVersion) { " v$($inv.ProductVersion)" } else { "" }
+            Write-Host "    [$invTime] $($inv.ProcessName)$verSuffix - Class: $($inv.WindowClass)" -ForegroundColor Red
+        }
+        Write-Host ""
+    }
+
+    # -- Norton-specific deep dive (when NortonUI is present) --
+    $nortonEvents = @($events | Where-Object { $_.ProcessName -ieq 'NortonUI' })
+    if ($nortonEvents.Count -gt 0 -and -not $Quiet) {
+        Write-Host "  --- NORTON CEF DEEP-DIVE ---" -ForegroundColor Red
+        $nortonVer = ($nortonEvents | Where-Object { $_.ProductVersion } | Select-Object -First 1).ProductVersion
+        Write-Host "    NortonUI.exe version : $nortonVer" -ForegroundColor Red
+        Write-Host "    Total NortonUI events: $($nortonEvents.Count) ($([math]::Round(($nortonEvents.Count / $events.Count) * 100, 1))% of all events)" -ForegroundColor Red
+        $nortonInvisible = @($nortonEvents | Where-Object { -not $_.IsVisible })
+        Write-Host "    Invisible activations: $($nortonInvisible.Count) ($(if ($nortonEvents.Count -gt 0) { [math]::Round(($nortonInvisible.Count / $nortonEvents.Count) * 100, 1) } else { 0 })% of NortonUI events)" -ForegroundColor Red
+
+        $nortonByClass = $nortonEvents | Group-Object WindowClass | Sort-Object Count -Descending
+        Write-Host "    By window class:" -ForegroundColor Red
+        foreach ($nc in $nortonByClass) {
+            Write-Host "      - $($nc.Name): $($nc.Count)" -ForegroundColor DarkRed
+        }
+
+        $nortonStats = Get-TimingStats -Timestamps @($nortonEvents | ForEach-Object { $_.Timestamp })
+        if ($nortonStats) {
+            Write-Host "    Timing: avg $($nortonStats.Avg)s | median $($nortonStats.Median)s | min $($nortonStats.Min)s | max $($nortonStats.Max)s" -ForegroundColor Red
         }
         Write-Host ""
     }
@@ -655,11 +837,14 @@ if ($events.Count -gt 0) {
     $summaryLines += "SUMMARY"
     $summaryLines += "==========================================================="
     $summaryLines += "Total events         : $($events.Count)"
-    $summaryLines += "Rapid focus changes  : $($script:stealCount)"
+    $summaryLines += "Rapid focus changes  : $($script:rapidStealCount)"
+    $summaryLines += "Bursts (<500ms)      : $($script:burstCount)"
     $summaryLines += ""
     $summaryLines += "EVENTS BY PROCESS:"
     foreach ($pg in $processGroups) {
-        $pgSummary = "  {0,-30} : {1}" -f $pg.Name, $pg.Count
+        $suspectInfo = Test-IsSuspectProcess -ProcessName $pg.Name
+        $marker = if ($suspectInfo) { " [SUSPECT-$($suspectInfo.Risk)]" } else { "" }
+        $pgSummary = "  {0,-30} : {1}{2}" -f $pg.Name, $pg.Count, $marker
         $summaryLines += $pgSummary
     }
     $summaryLines += ""
@@ -669,13 +854,40 @@ if ($events.Count -gt 0) {
         $summaryLines += $cgSummary
     }
     $summaryLines += ""
+
+    if ($suspectProcessNames.Count -gt 0) {
+        $summaryLines += "PER-SUSPECT TIMING:"
+        foreach ($sp in $suspectProcessNames) {
+            $timestamps = @($events | Where-Object { $_.ProcessName -eq $sp } | ForEach-Object { $_.Timestamp })
+            $stats = Get-TimingStats -Timestamps $timestamps
+            if ($stats -and $stats.Count -ge 2) {
+                $summaryLines += "  $sp : count=$($stats.Count) avg=$($stats.Avg)s median=$($stats.Median)s stddev=$($stats.StdDev)s min=$($stats.Min)s max=$($stats.Max)s"
+            }
+        }
+        $summaryLines += ""
+    }
+
+    if ($nortonEvents.Count -gt 0) {
+        $nortonVer = ($nortonEvents | Where-Object { $_.ProductVersion } | Select-Object -First 1).ProductVersion
+        $summaryLines += "NORTON CEF DEEP-DIVE:"
+        $summaryLines += "  NortonUI version: $nortonVer"
+        $summaryLines += "  Total events: $($nortonEvents.Count)"
+        $nortonInvisible = @($nortonEvents | Where-Object { -not $_.IsVisible })
+        $summaryLines += "  Invisible activations: $($nortonInvisible.Count)"
+        foreach ($nc in ($nortonEvents | Group-Object WindowClass | Sort-Object Count -Descending)) {
+            $summaryLines += "  Class $($nc.Name): $($nc.Count)"
+        }
+        $summaryLines += ""
+    }
+
     $summaryLines += "INVISIBLE WINDOW EVENTS:"
     foreach ($inv in $invisibleEvents) {
         $invTime = $inv.Timestamp.ToString('HH:mm:ss.fff')
-        $summaryLines += "  $invTime | $($inv.ProcessName) | $($inv.WindowClass) | $($inv.ProcessPath)"
+        $verSuffix = if ($inv.ProductVersion) { " v$($inv.ProductVersion)" } else { "" }
+        $summaryLines += "  $invTime | $($inv.ProcessName)$verSuffix | $($inv.WindowClass) | $($inv.ProcessPath)"
     }
 
-    $summaryLines | Out-File -FilePath $DetailLogPath -Append -Encoding UTF8
+    try { $summaryLines | Out-File -FilePath $DetailLogPath -Append -Encoding UTF8 } catch { }
 }
 
 if (-not $Quiet) {
@@ -687,6 +899,7 @@ if (-not $Quiet) {
     Write-Host "  NEXT STEPS:" -ForegroundColor Cyan
     Write-Host "  1. Share the CSV and Detail log files for analysis" -ForegroundColor White
     Write-Host "  2. Look for patterns in the SUSPECT and TSF/IME entries" -ForegroundColor White
-    Write-Host "  3. If a regular interval appears, we can identify the timer source" -ForegroundColor White
+    Write-Host "  3. PER-SUSPECT TIMING shows if there's a clear timer pattern" -ForegroundColor White
+    Write-Host "  4. NORTON CEF DEEP-DIVE shows the version and behavior" -ForegroundColor White
     Write-Host ""
 }

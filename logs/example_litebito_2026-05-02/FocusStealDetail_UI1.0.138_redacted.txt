@@ -1,0 +1,120 @@
+﻿===========================================================
+FOCUS-STEAL DIAGNOSTIC REPORT (v1.2)
+Generated: 2026-05-02 22:51:50
+Computer : REDACTED-PC
+User     : REDACTED
+Admin    : True
+Duration : 30 minutes
+===========================================================
+
+--- RUNNING SUSPECT PROCESSES AT START ---
+  [HIGH] PID=18868 ctfmon v10.0.22621.6133 - C:\WINDOWS\system32\ctfmon.exe
+  [HIGH] PID=5464 nllToolsSvc v26.4.10932.0 - C:\Program Files\Norton\Suite\nllToolsSvc.exe
+  [HIGH] PID=15024 NortonUI v26.4.10932.0 - C:\Program Files\Norton\Suite\NortonUI.exe
+  [HIGH] PID=37468 NortonUI v26.4.10932.0 - C:\Program Files\Norton\Suite\NortonUI.exe
+  [HIGH] PID=37568 NortonUI v26.4.10932.0 - C:\Program Files\Norton\Suite\NortonUI.exe
+  [HIGH] PID=37592 NortonUI v26.4.10932.0 - C:\Program Files\Norton\Suite\NortonUI.exe
+  [HIGH] PID=70436 NortonUI v26.4.10932.0 - C:\Program Files\Norton\Suite\NortonUI.exe
+  [LOW] PID=16512 RuntimeBroker v10.0.22621.5415 - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=17580 RuntimeBroker v10.0.22621.5415 - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=20256 RuntimeBroker v10.0.22621.5415 - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=25240 RuntimeBroker v10.0.22621.5415 - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=38208 RuntimeBroker v10.0.22621.5415 - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=39980 RuntimeBroker v10.0.22621.5415 - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=41420 RuntimeBroker v10.0.22621.5415 - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=45656 RuntimeBroker v10.0.22621.5415 - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=52456 RuntimeBroker v10.0.22621.5415 - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=57052 RuntimeBroker v10.0.22621.5415 - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=67648 RuntimeBroker v10.0.22621.5415 - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=68956 RuntimeBroker v10.0.22621.5415 - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=17320 SearchHost v2125.26100.0.0 - C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+  [LOW] PID=24848 ShellExperienceHost v10.0.22621.6133 - C:\WINDOWS\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe
+  [MEDIUM] PID=18772 WidgetService v0.5 - C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntime_1.6.14.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe
+
+--- FOCUS CHANGE LOG (dt = seconds since previous event) ---
+[22:53:08.028] FOREGROUND | dt=0.00s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[22:53:08.068] FOREGROUND | dt=0.04s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[22:54:46.340] FOREGROUND | dt=98.27s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[22:54:46.391] FOREGROUND | dt=0.05s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[22:55:03.275] FOREGROUND | dt=16.88s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[22:55:03.307] FOREGROUND | dt=0.03s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[22:58:20.334] FOREGROUND | dt=197.03s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[22:58:20.392] FOREGROUND | dt=0.06s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[22:59:47.259] FOREGROUND | dt=86.87s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[22:59:47.292] FOREGROUND | dt=0.03s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:00:04.049] FOREGROUND | dt=16.76s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:00:04.081] FOREGROUND | dt=0.03s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:04:48.336] FOREGROUND | dt=284.25s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:04:48.375] FOREGROUND | dt=0.04s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:05:05.363] FOREGROUND | dt=16.99s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:05:05.394] FOREGROUND | dt=0.03s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:06:08.077] FOREGROUND | dt=62.68s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:06:08.107] FOREGROUND | dt=0.03s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:07:19.031] FOREGROUND | dt=70.92s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:07:19.067] FOREGROUND | dt=0.04s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:09:49.289] FOREGROUND | dt=150.22s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:09:49.424] FOREGROUND | dt=0.14s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:10:00.089] FOREGROUND | dt=10.66s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:10:00.124] FOREGROUND | dt=0.03s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:11:07.947] FOREGROUND | dt=67.82s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:11:07.976] FOREGROUND | dt=0.03s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:12:19.050] FOREGROUND | dt=71.07s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:12:19.110] FOREGROUND | dt=0.06s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:14:51.011] FOREGROUND | dt=151.90s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:14:51.040] FOREGROUND | dt=0.03s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:15:07.427] FOREGROUND | dt=16.39s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:15:07.458] FOREGROUND | dt=0.03s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:16:07.953] FOREGROUND | dt=60.49s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:16:07.983] FOREGROUND | dt=0.03s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:17:19.069] FOREGROUND | dt=71.09s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:17:19.114] FOREGROUND | dt=0.04s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:19:52.338] FOREGROUND | dt=153.22s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:19:52.408] FOREGROUND | dt=0.07s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:20:09.024] FOREGROUND | dt=16.62s | PID=15024 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+[23:20:09.059] FOREGROUND | dt=0.03s | PID=15024 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:14964) | Ver=26.4.10932.0
+
+===========================================================
+SUMMARY
+===========================================================
+Total events         : 40
+Rapid focus changes  : 20
+Bursts (<500ms)      : 20
+
+EVENTS BY PROCESS:
+  NortonUI                       : 40 [SUSPECT-HIGH]
+
+EVENTS BY WINDOW CLASS:
+  CefHeaderWindow                : 20
+  GeniumWindow                   : 20
+
+PER-SUSPECT TIMING:
+  NortonUI : count=40 avg=41.56s median=0.14s stddev=65.52s min=0.03s max=284.25s
+
+NORTON CEF DEEP-DIVE:
+  NortonUI version: 26.4.10932.0
+  Total events: 40
+  Invisible activations: 20
+  Class CefHeaderWindow: 20
+  Class GeniumWindow: 20
+
+INVISIBLE WINDOW EVENTS:
+  22:53:08.068 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  22:54:46.391 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  22:55:03.307 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  22:58:20.392 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  22:59:47.292 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:00:04.081 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:04:48.375 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:05:05.394 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:06:08.107 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:07:19.067 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:09:49.424 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:10:00.124 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:11:07.976 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:12:19.110 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:14:51.040 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:15:07.458 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:16:07.983 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:17:19.114 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:19:52.408 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  23:20:09.059 | NortonUI v26.4.10932.0 | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe

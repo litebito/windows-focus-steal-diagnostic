@@ -1,0 +1,37 @@
+# CODEOWNERS for windows-focus-steal-diagnostic
+#
+# Lines below define who must review pull requests for specific paths.
+# When combined with branch protection's "Require review from CODEOWNERS"
+# rule, this enforces that the listed owners must approve a PR before
+# it can be merged.
+#
+# Syntax: <path-pattern> <owner> [<owner>...]
+# Patterns follow .gitignore-style globs.
+
+# Default owner for everything in the repo
+*                                       @litebito
+
+# Sensitive code — diagnostic tools and redaction script
+/FocusStealDiagnostic.ps1               @litebito
+/NortonFocusStealFix.ps1                @litebito
+/scripts/                               @litebito
+
+# Bug reports and developer-facing analysis
+/Norton360_FocusSteal_BugReport.md      @litebito
+/Norton_BugReport_Communities.md        @litebito
+/docs_for_norton_devs/                  @litebito
+
+# Repository-level meta files
+/README.md                              @litebito
+/CHANGELOG.md                           @litebito
+/LICENSE                                @litebito
+/.github/                               @litebito
+/CONTRIBUTING.md                        @litebito
+/SECURITY.md                            @litebito
+/CODE_OF_CONDUCT.md                     @litebito
+
+# Existing example logs — must not be modified by external PRs
+/logs/example_litebito_*/               @litebito
+
+# Other contributor log folders — flag for review (but anyone can add new ones via PR)
+/logs/                                  @litebito

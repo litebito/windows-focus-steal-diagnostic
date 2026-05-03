@@ -1,0 +1,732 @@
+﻿===========================================================
+FOCUS-STEAL DIAGNOSTIC REPORT
+Generated: 2026-04-04 16:29:20
+Computer : REDACTED-PC
+User     : REDACTED
+Admin    : True
+Duration : 30 minutes
+===========================================================
+
+--- RUNNING SUSPECT PROCESSES AT START ---
+  [MEDIUM] PID=11016 AMDInstallManager - C:\Program Files\AMD\AMDInstallManager\AMDInstallManager.exe
+  [MEDIUM] PID=15292 AMDRSServ - C:\Program Files\AMD\CNext\CNext\AMDRSServ.exe
+  [MEDIUM] PID=49668 CrashPlanService - C:\Program Files\CrashPlan\CrashPlanService.exe
+  [HIGH] PID=14964 ctfmon - C:\WINDOWS\system32\ctfmon.exe
+  [MEDIUM] PID=11392 Dell.TechHub.Instrumentation.SubAgent - C:\Program Files\Dell\DTP\InstrumentationSubAgent\Dell.TechHub.Instrumentation.SubAgent.exe
+  [MEDIUM] PID=7040 Dell.TechHub.Instrumentation.UserProcess - C:\Program Files\Dell\DTP\InstrumentationSubAgent\Dell.TechHub.Instrumentation.UserProcess.exe
+  [MEDIUM] PID=41844 DesignStudioUI - C:\Program Files (x86)\Zebra Technologies\CardStudio2\DesignStudio\DesignStudioUI.exe
+  [MEDIUM] PID=31516 Greenshot - C:\Program Files\Greenshot\Greenshot.exe
+  [MEDIUM] PID=7452 LansweeperAgentService - C:\Program Files (x86)\LansweeperAgent\LansweeperAgentService.exe
+  [MEDIUM] PID=28496 LogiOptions - C:\Program Files\Logitech\LogiOptions\LogiOptions.exe
+  [MEDIUM] PID=18524 LogiOptionsMgr - C:\ProgramData\Logishrd\LogiOptions\Software\Current\LogiOptionsMgr.exe
+  [MEDIUM] PID=18292 logioptionsplus_agent - C:\Program Files\LogiOptionsPlus\logioptionsplus_agent.exe
+  [MEDIUM] PID=18088 logioptionsplus_appbroker - C:\Program Files\LogiOptionsPlus\logioptionsplus_appbroker.exe
+  [MEDIUM] PID=30456 logioptionsplus_updater - C:\Program Files\LogiOptionsPlus\logioptionsplus_updater.exe
+  [MEDIUM] PID=20628 LogiPluginService - C:\Program Files\Logi\LogiPluginService\LogiPluginService.exe
+  [MEDIUM] PID=33096 LogiPluginServiceExt - C:\Program Files\Logi\LogiPluginService\LogiPluginServiceExt.exe
+  [HIGH] PID=10036 Loupedeck - C:\Program Files (x86)\Loupedeck\Loupedeck2\configui2\Loupedeck.exe
+  [HIGH] PID=38732 Loupedeck - C:\Program Files (x86)\Loupedeck\Loupedeck2\configui2\Loupedeck.exe
+  [HIGH] PID=65300 Loupedeck - C:\Program Files (x86)\Loupedeck\Loupedeck2\configui2\Loupedeck.exe
+  [HIGH] PID=65668 Loupedeck - C:\Program Files (x86)\Loupedeck\Loupedeck2\configui2\Loupedeck.exe
+  [MEDIUM] PID=6428 mDNSResponder - C:\Program Files\Bonjour\mDNSResponder.exe
+  [MEDIUM] PID=56888 Microsoft.CmdPal.Ext.PowerToys - C:\Users\REDACTED\AppData\Local\PowerToys\Microsoft.CmdPal.Ext.PowerToys.exe
+  [MEDIUM] PID=42788 MigrationService - C:\Program Files (x86)\Samsung\Samsung Magician\MigrationService\MigrationService.exe
+  [MEDIUM] PID=26360 MouseAndKeyeventOnSystem - C:\Program Files\Dell\Dell Display and Peripheral Manager\Plugins\NKVM\DellDisplayManagerNetworkKVMService\MouseAndKeyeventOnSystem\MouseAndKeyeventOnSystem.exe
+  [MEDIUM] PID=4980 NortonSvc - 
+  [MEDIUM] PID=4980 NortonSvc - 
+  [MEDIUM] PID=18044 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=20716 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=22188 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=29984 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=7364 OneApp.IGCC.WinService - C:\WINDOWS\System32\DriverStore\FileRepository\igcc_dch.inf_amd64_734ca279c9cf8df2\OneApp.IGCC.WinService.exe
+  [MEDIUM] PID=61528 OpenConsole - C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.20211.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  [MEDIUM] PID=67860 OpenConsole - C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.20211.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  [MEDIUM] PID=46972 PowerToys - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.exe
+  [MEDIUM] PID=19960 PowerToys.AdvancedPaste - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.AdvancedPaste.exe
+  [MEDIUM] PID=21540 PowerToys.ColorPickerUI - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.ColorPickerUI.exe
+  [MEDIUM] PID=41636 PowerToys.CropAndLock - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.CropAndLock.exe
+  [MEDIUM] PID=57948 PowerToys.FancyZones - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.FancyZones.exe
+  [MEDIUM] PID=57948 PowerToys.FancyZones - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.FancyZones.exe
+  [MEDIUM] PID=20300 PowerToys.Peek.UI - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.Peek.UI.exe
+  [MEDIUM] PID=26848 PowerToys.PowerLauncher - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.PowerLauncher.exe
+  [MEDIUM] PID=52004 PowerToys.QuickAccess - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.QuickAccess.exe
+  [MEDIUM] PID=26896 PowerToys.Settings - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.Settings.exe
+  [MEDIUM] PID=8612 RadeonSoftware - C:\Program Files\AMD\CNext\CNext\Radeonsoftware.exe
+  [MEDIUM] PID=8612 RadeonSoftware - C:\Program Files\AMD\CNext\CNext\Radeonsoftware.exe
+  [LOW] PID=6192 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=12280 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=14632 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=15028 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=18756 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=25348 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=26356 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=39940 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=40244 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=48300 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=62084 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [MEDIUM] PID=25968 SamsungMagicianSVC - C:\Program Files (x86)\Samsung\Samsung Magician\SamsungMagicianSVC.exe
+  [LOW] PID=14384 SearchHost - C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+  [LOW] PID=24848 ShellExperienceHost - C:\WINDOWS\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe
+  [MEDIUM] PID=10672 unsecapp - C:\WINDOWS\system32\wbem\unsecapp.exe
+  [MEDIUM] PID=16820 unsecapp - C:\WINDOWS\system32\wbem\unsecapp.exe
+  [MEDIUM] PID=7568 VpnSvc - C:\Program Files\Norton\Suite\VpnSvc.exe
+  [MEDIUM] PID=21176 WidgetService - C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntime_1.6.14.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe
+  [MEDIUM] PID=7604 WMIRegistrationService - C:\WINDOWS\System32\DriverStore\FileRepository\mewmiprov.inf_amd64_d51901c26227fb29\WMIRegistrationService.exe
+
+--- FOCUS CHANGE LOG ---
+[16:29:30.190] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:29:30.521] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:29:33.846] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:29:34.192] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:29:37.032] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:29:37.445] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:29:48.012] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:29:48.416] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:29:48.735] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:29:49.044] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:29:49.349] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:29:49.827] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:29:50.156] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:29:50.189] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:29:50.536] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:29:51.021] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:29:58.565] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:29:58.986] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:29:59.371] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:29:59.814] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:30:00.146] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:30:00.542] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:30:00.878] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:30:00.910] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:30:01.320] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:30:01.762] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:31:09.276] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:31:09.650] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:31:10.032] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:31:10.354] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:31:10.774] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:31:11.093] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:31:11.417] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:31:11.459] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:31:11.785] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:31:12.148] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:32:19.463] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:32:19.864] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:32:20.206] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:32:20.630] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:32:21.018] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:32:21.312] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:32:21.607] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:32:21.640] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:32:21.994] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:32:22.285] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:32:36.741] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:32:37.078] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:32:37.499] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:32:37.806] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:32:38.143] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:32:38.512] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:32:38.826] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:32:38.862] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:32:39.203] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:32:39.575] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:33:58.411] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:33:58.773] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:33:59.113] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:33:59.445] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:33:59.801] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:34:00.132] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:34:00.491] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:34:00.523] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:34:00.844] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:34:01.177] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:35:56.632] MINIMIZE_END | PID=39212 (WhatsApp.Root) | Class=WinUIDesktopWin32WindowClass | Title=WhatsApp | Visible=True | Parent=svchost(PID:1740)
+[16:35:56.966] FOREGROUND | PID=39212 (WhatsApp.Root) | Class=WinUIDesktopWin32WindowClass | Title=WhatsApp | Visible=True | Parent=svchost(PID:1740)
+[16:35:57.305] FOREGROUND | PID=39212 (WhatsApp.Root) | Class=WinUIDesktopWin32WindowClass | Title=WhatsApp | Visible=True | Parent=svchost(PID:1740)
+[16:35:57.338] FOREGROUND | PID=11296 (explorer) | Class=XamlExplorerHostIslandWindow | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[16:35:57.638] FOREGROUND | PID=11296 (explorer) | Class=XamlExplorerHostIslandWindow | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[16:35:58.366] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:35:58.716] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:35:59.035] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:35:59.371] FOREGROUND | PID=39212 (WhatsApp.Root) | Class=WinUIDesktopWin32WindowClass | Title=WhatsApp | Visible=True | Parent=svchost(PID:1740)
+[16:35:59.827] FOREGROUND | PID=39212 (WhatsApp.Root) | Class=WinUIDesktopWin32WindowClass | Title=WhatsApp | Visible=True | Parent=svchost(PID:1740)
+[16:36:00.147] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:36:00.438] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:36:00.472] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:36:00.766] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:36:01.087] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:36:02.209] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:36:02.516] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:36:37.265] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:36:37.598] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:36:37.978] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:36:38.400] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:36:38.747] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:36:39.065] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:36:39.378] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:36:39.411] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:36:39.767] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:36:40.175] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:37:07.438] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:37:07.808] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:37:09.422] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:37:09.810] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:37:10.201] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:37:10.598] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:37:10.987] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:37:11.307] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:37:11.628] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:37:11.665] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:37:12.176] FOREGROUND | PID=56584 (Code) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:65460)
+[16:37:12.511] FOREGROUND | PID=56584 (Code) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:65460)
+[16:37:12.545] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:37:13.079] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:37:13.417] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:37:13.453] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:37:19.847] MINIMIZE_END | PID=10036 (Loupedeck) | Class=Chrome_WidgetWin_1 | Title=Loupedeck | Visible=True | Parent=LogiPluginService(PID:20628)
+[16:37:20.265] FOREGROUND | PID=10036 (Loupedeck) | Class=Chrome_WidgetWin_1 | Title=Loupedeck | Visible=True | Parent=LogiPluginService(PID:20628)
+[16:37:20.614] FOREGROUND | PID=10036 (Loupedeck) | Class=Chrome_WidgetWin_1 | Title=Loupedeck | Visible=True | Parent=LogiPluginService(PID:20628)
+[16:37:20.654] FOREGROUND | PID=11296 (explorer) | Class=Shell_TrayWnd | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[16:37:20.976] FOREGROUND | PID=11296 (explorer) | Class=Shell_TrayWnd | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[16:37:23.336] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:37:23.687] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:38:58.348] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:38:58.698] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:38:59.164] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:38:59.509] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:38:59.863] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:39:00.171] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:39:00.516] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:39:00.547] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:39:00.822] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:39:01.283] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:39:48.876] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:39:49.207] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:39:49.540] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:39:49.900] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:39:50.251] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:39:50.569] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:39:50.888] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:39:50.925] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:39:51.217] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:39:51.614] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:40:05.412] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:40:05.804] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:40:06.157] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:40:06.530] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:40:06.855] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:40:07.172] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:40:07.635] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:40:07.672] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:40:07.952] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:40:08.323] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:41:09.467] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:41:09.909] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:41:10.243] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:41:10.594] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:41:10.901] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:41:11.242] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:41:11.610] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:41:11.647] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:41:11.947] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:41:12.328] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:42:20.869] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:42:21.277] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:42:21.618] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:42:22.363] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:42:22.721] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:42:23.227] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:42:23.701] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:42:24.068] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:42:24.418] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:42:24.805] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:42:24.841] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:42:25.251] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:42:25.725] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:42:25.790] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:42:26.155] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:42:26.550] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:42:26.894] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:42:27.208] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:42:27.513] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:42:27.919] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:43:58.387] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:43:58.726] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:43:59.051] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:43:59.810] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:44:00.207] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:44:00.634] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:44:00.936] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:44:00.970] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:44:01.270] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:44:01.559] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:45:09.886] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:45:10.200] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:45:10.558] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:45:10.925] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:45:11.338] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:45:11.753] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:45:12.186] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:45:12.220] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:45:12.594] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:45:12.966] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:46:58.311] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:46:58.667] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:46:59.117] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:46:59.465] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:46:59.864] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:47:00.154] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:47:00.465] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:47:00.499] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:47:00.809] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:47:01.138] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:47:58.361] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:47:58.844] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:47:59.158] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:47:59.634] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:48:00.071] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:48:00.363] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:48:00.693] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:48:00.727] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:48:01.045] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:48:01.355] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:48:58.765] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:48:59.263] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:48:59.624] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:48:59.972] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:49:00.334] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:49:00.668] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:49:01.100] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:49:01.133] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:49:01.509] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:49:01.829] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:49:49.804] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:49:50.171] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:49:50.509] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:49:51.039] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:49:51.470] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:49:51.859] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:49:52.230] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:49:52.262] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:49:52.731] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:49:53.065] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:50:00.551] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:50:00.926] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:50:01.370] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:50:01.853] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:50:02.328] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:50:02.815] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:50:03.257] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:50:03.292] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:50:03.761] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:50:04.204] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:51:09.796] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:51:10.154] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:51:10.496] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:51:10.851] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:51:11.199] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:51:11.673] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:51:12.052] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:51:12.115] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:51:12.409] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:51:12.724] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:52:21.788] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:52:22.142] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:52:22.582] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:52:22.947] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:52:23.372] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:52:23.797] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:52:24.235] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:52:24.270] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:52:24.611] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:52:24.926] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:52:38.555] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:52:38.890] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:52:39.268] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:52:39.639] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:52:40.199] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:52:40.581] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:52:40.615] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:52:40.924] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:52:41.238] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:52:41.521] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:53:58.357] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:53:58.717] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:53:59.053] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:53:59.451] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:53:59.825] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:54:00.174] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:54:00.649] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:54:00.685] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:54:01.138] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:54:01.475] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:54:58.416] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:54:58.770] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:54:59.094] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:54:59.447] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:54:59.834] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:55:00.159] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:55:00.497] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:55:00.530] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:55:00.940] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:55:01.227] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:56:58.459] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:56:58.782] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:56:59.124] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:56:59.840] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:57:00.234] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:57:00.530] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:57:00.917] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:57:00.951] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:57:01.432] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:57:01.790] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:58:58.445] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:58:58.821] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:58:59.163] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:58:59.573] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:58:59.954] FOREGROUND | PID=66972 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[16:59:00.309] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[16:59:00.817] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:59:00.852] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[16:59:01.163] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[16:59:01.541] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+
+===========================================================
+SUMMARY
+===========================================================
+Total events         : 420
+Rapid focus changes  : 285
+
+EVENTS BY PROCESS:
+  NortonUI                       : 178
+  Idle                           : 134
+  WindowsTerminal                : 71
+  chrome                         : 23
+  WhatsApp.Root                  : 5
+  explorer                       : 4
+  Loupedeck                      : 3
+  Code                           : 2
+
+EVENTS BY WINDOW CLASS:
+                                 : 134
+  Chrome_WidgetWin_0             : 99
+  CefHeaderWindow                : 79
+  CASCADIA_HOSTING_WINDOW_CLASS  : 71
+  Chrome_WidgetWin_1             : 28
+  WinUIDesktopWin32WindowClass   : 5
+  Shell_TrayWnd                  : 2
+  XamlExplorerHostIslandWindow   : 2
+
+INVISIBLE WINDOW EVENTS:
+  16:03:09.642 | Idle |  | ACCESS_DENIED
+  16:03:10.337 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:03:10.374 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:03:10.745 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:07:58.362 | Idle |  | ACCESS_DENIED
+  16:07:59.139 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:07:59.177 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:07:59.632 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:08:58.419 | Idle |  | ACCESS_DENIED
+  16:08:59.233 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:08:59.266 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:08:59.567 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:09:45.596 | Idle |  | ACCESS_DENIED
+  16:09:46.276 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:09:46.312 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:09:46.610 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:09:58.396 | Idle |  | ACCESS_DENIED
+  16:09:59.125 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:09:59.160 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:09:59.564 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:10:59.377 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:11:00.043 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:11:00.084 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:11:00.395 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:12:17.631 | Idle |  | ACCESS_DENIED
+  16:12:18.388 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:12:18.465 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:12:18.787 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:12:34.402 | Idle |  | ACCESS_DENIED
+  16:12:35.101 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:12:35.134 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:12:35.471 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:13:58.448 | Idle |  | ACCESS_DENIED
+  16:13:59.157 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:13:59.203 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:13:59.578 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:14:31.492 | Idle |  | ACCESS_DENIED
+  16:14:32.256 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:14:32.290 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:14:32.324 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:15:09.407 | Idle |  | ACCESS_DENIED
+  16:15:10.283 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:15:10.325 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:15:10.652 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:18:58.671 | Idle |  | ACCESS_DENIED
+  16:18:59.474 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:18:59.507 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:18:59.874 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:19:46.733 | Idle |  | ACCESS_DENIED
+  16:19:47.607 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:19:47.638 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:19:47.942 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:20:03.306 | Idle |  | ACCESS_DENIED
+  16:20:04.050 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:20:04.087 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:20:04.394 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:21:09.499 | Idle |  | ACCESS_DENIED
+  16:21:10.162 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:21:10.196 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:21:10.500 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:22:18.746 | Idle |  | ACCESS_DENIED
+  16:22:19.530 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:22:19.567 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:22:19.910 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:22:35.335 | Idle |  | ACCESS_DENIED
+  16:22:35.990 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:22:36.024 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:22:36.302 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:24:58.443 | Idle |  | ACCESS_DENIED
+  16:24:59.457 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:24:59.492 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:24:59.808 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:26:58.402 | Idle |  | ACCESS_DENIED
+  16:26:59.151 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:26:59.182 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:26:59.472 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:27:58.495 | Idle |  | ACCESS_DENIED
+  16:27:59.162 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:27:59.203 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:27:59.511 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:29:48.012 | Idle |  | ACCESS_DENIED
+  16:29:49.044 | Idle |  | ACCESS_DENIED
+  16:29:49.349 | Idle |  | ACCESS_DENIED
+  16:29:49.827 | Idle |  | ACCESS_DENIED
+  16:29:50.156 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:29:50.189 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:29:50.536 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:29:51.021 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:29:58.565 | Idle |  | ACCESS_DENIED
+  16:29:58.986 | Idle |  | ACCESS_DENIED
+  16:29:59.371 | Idle |  | ACCESS_DENIED
+  16:30:00.542 | Idle |  | ACCESS_DENIED
+  16:30:00.878 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:30:00.910 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:30:01.320 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:30:01.762 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:31:09.276 | Idle |  | ACCESS_DENIED
+  16:31:09.650 | Idle |  | ACCESS_DENIED
+  16:31:10.032 | Idle |  | ACCESS_DENIED
+  16:31:11.093 | Idle |  | ACCESS_DENIED
+  16:31:11.417 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:31:11.459 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:31:11.785 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:31:12.148 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:32:19.463 | Idle |  | ACCESS_DENIED
+  16:32:19.864 | Idle |  | ACCESS_DENIED
+  16:32:20.206 | Idle |  | ACCESS_DENIED
+  16:32:21.312 | Idle |  | ACCESS_DENIED
+  16:32:21.607 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:32:21.640 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:32:21.994 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:32:22.285 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:32:36.741 | Idle |  | ACCESS_DENIED
+  16:32:37.078 | Idle |  | ACCESS_DENIED
+  16:32:38.143 | Idle |  | ACCESS_DENIED
+  16:32:38.512 | Idle |  | ACCESS_DENIED
+  16:32:38.826 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:32:38.862 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:32:39.203 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:32:39.575 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:33:58.411 | Idle |  | ACCESS_DENIED
+  16:33:58.773 | Idle |  | ACCESS_DENIED
+  16:33:59.113 | Idle |  | ACCESS_DENIED
+  16:34:00.132 | Idle |  | ACCESS_DENIED
+  16:34:00.491 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:34:00.523 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:34:00.844 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:34:01.177 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:35:58.366 | Idle |  | ACCESS_DENIED
+  16:35:58.716 | Idle |  | ACCESS_DENIED
+  16:35:59.035 | Idle |  | ACCESS_DENIED
+  16:36:00.147 | Idle |  | ACCESS_DENIED
+  16:36:00.438 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:36:00.472 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:36:00.766 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:36:01.087 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:36:37.265 | Idle |  | ACCESS_DENIED
+  16:36:37.598 | Idle |  | ACCESS_DENIED
+  16:36:37.978 | Idle |  | ACCESS_DENIED
+  16:36:39.065 | Idle |  | ACCESS_DENIED
+  16:36:39.378 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:36:39.411 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:36:39.767 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:36:40.175 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:37:09.422 | Idle |  | ACCESS_DENIED
+  16:37:09.810 | Idle |  | ACCESS_DENIED
+  16:37:10.201 | Idle |  | ACCESS_DENIED
+  16:37:11.307 | Idle |  | ACCESS_DENIED
+  16:37:11.628 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:37:11.665 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:37:12.545 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:37:13.453 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:38:58.348 | Idle |  | ACCESS_DENIED
+  16:38:58.698 | Idle |  | ACCESS_DENIED
+  16:38:59.863 | Idle |  | ACCESS_DENIED
+  16:39:00.171 | Idle |  | ACCESS_DENIED
+  16:39:00.516 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:39:00.547 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:39:00.822 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:39:01.283 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:39:48.876 | Idle |  | ACCESS_DENIED
+  16:39:49.207 | Idle |  | ACCESS_DENIED
+  16:39:49.540 | Idle |  | ACCESS_DENIED
+  16:39:50.569 | Idle |  | ACCESS_DENIED
+  16:39:50.888 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:39:50.925 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:39:51.217 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:39:51.614 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:40:05.412 | Idle |  | ACCESS_DENIED
+  16:40:05.804 | Idle |  | ACCESS_DENIED
+  16:40:06.157 | Idle |  | ACCESS_DENIED
+  16:40:07.172 | Idle |  | ACCESS_DENIED
+  16:40:07.635 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:40:07.672 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:40:07.952 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:40:08.323 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:41:09.467 | Idle |  | ACCESS_DENIED
+  16:41:09.909 | Idle |  | ACCESS_DENIED
+  16:41:10.901 | Idle |  | ACCESS_DENIED
+  16:41:11.242 | Idle |  | ACCESS_DENIED
+  16:41:11.610 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:41:11.647 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:41:11.947 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:41:12.328 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:42:20.869 | Idle |  | ACCESS_DENIED
+  16:42:21.277 | Idle |  | ACCESS_DENIED
+  16:42:21.618 | Idle |  | ACCESS_DENIED
+  16:42:22.363 | Idle |  | ACCESS_DENIED
+  16:42:22.721 | Idle |  | ACCESS_DENIED
+  16:42:23.227 | Idle |  | ACCESS_DENIED
+  16:42:24.418 | Idle |  | ACCESS_DENIED
+  16:42:24.805 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:42:24.841 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:42:25.251 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:42:25.725 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:42:26.550 | Idle |  | ACCESS_DENIED
+  16:42:26.894 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:42:27.208 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:42:27.513 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:42:27.919 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:43:58.387 | Idle |  | ACCESS_DENIED
+  16:43:58.726 | Idle |  | ACCESS_DENIED
+  16:43:59.051 | Idle |  | ACCESS_DENIED
+  16:44:00.634 | Idle |  | ACCESS_DENIED
+  16:44:00.936 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:44:00.970 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:44:01.270 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:44:01.559 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:45:09.886 | Idle |  | ACCESS_DENIED
+  16:45:10.200 | Idle |  | ACCESS_DENIED
+  16:45:10.558 | Idle |  | ACCESS_DENIED
+  16:45:11.753 | Idle |  | ACCESS_DENIED
+  16:45:12.186 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:45:12.220 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:45:12.594 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:45:12.966 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:46:58.311 | Idle |  | ACCESS_DENIED
+  16:46:58.667 | Idle |  | ACCESS_DENIED
+  16:46:59.117 | Idle |  | ACCESS_DENIED
+  16:47:00.154 | Idle |  | ACCESS_DENIED
+  16:47:00.465 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:47:00.499 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:47:00.809 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:47:01.138 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:47:58.361 | Idle |  | ACCESS_DENIED
+  16:47:58.844 | Idle |  | ACCESS_DENIED
+  16:47:59.158 | Idle |  | ACCESS_DENIED
+  16:48:00.363 | Idle |  | ACCESS_DENIED
+  16:48:00.693 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:48:00.727 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:48:01.045 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:48:01.355 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:48:58.765 | Idle |  | ACCESS_DENIED
+  16:48:59.263 | Idle |  | ACCESS_DENIED
+  16:48:59.624 | Idle |  | ACCESS_DENIED
+  16:49:00.668 | Idle |  | ACCESS_DENIED
+  16:49:01.100 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:49:01.133 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:49:01.509 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:49:01.829 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:49:49.804 | Idle |  | ACCESS_DENIED
+  16:49:50.171 | Idle |  | ACCESS_DENIED
+  16:49:50.509 | Idle |  | ACCESS_DENIED
+  16:49:51.859 | Idle |  | ACCESS_DENIED
+  16:49:52.230 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:49:52.262 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:49:52.731 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:49:53.065 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:50:00.551 | Idle |  | ACCESS_DENIED
+  16:50:00.926 | Idle |  | ACCESS_DENIED
+  16:50:01.370 | Idle |  | ACCESS_DENIED
+  16:50:02.815 | Idle |  | ACCESS_DENIED
+  16:50:03.257 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:50:03.292 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:50:03.761 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:50:04.204 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:51:09.796 | Idle |  | ACCESS_DENIED
+  16:51:10.154 | Idle |  | ACCESS_DENIED
+  16:51:10.496 | Idle |  | ACCESS_DENIED
+  16:51:11.673 | Idle |  | ACCESS_DENIED
+  16:51:12.052 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:51:12.115 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:51:12.409 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:51:12.724 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:52:21.788 | Idle |  | ACCESS_DENIED
+  16:52:22.142 | Idle |  | ACCESS_DENIED
+  16:52:22.582 | Idle |  | ACCESS_DENIED
+  16:52:23.797 | Idle |  | ACCESS_DENIED
+  16:52:24.235 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:52:24.270 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:52:24.611 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:52:24.926 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:52:38.555 | Idle |  | ACCESS_DENIED
+  16:52:38.890 | Idle |  | ACCESS_DENIED
+  16:52:40.199 | Idle |  | ACCESS_DENIED
+  16:52:40.581 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:52:40.615 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:52:40.924 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:52:41.238 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:52:41.521 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:53:58.357 | Idle |  | ACCESS_DENIED
+  16:53:58.717 | Idle |  | ACCESS_DENIED
+  16:53:59.053 | Idle |  | ACCESS_DENIED
+  16:54:00.174 | Idle |  | ACCESS_DENIED
+  16:54:00.649 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:54:00.685 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:54:01.138 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:54:01.475 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:54:58.416 | Idle |  | ACCESS_DENIED
+  16:54:58.770 | Idle |  | ACCESS_DENIED
+  16:54:59.094 | Idle |  | ACCESS_DENIED
+  16:55:00.159 | Idle |  | ACCESS_DENIED
+  16:55:00.497 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:55:00.530 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:55:00.940 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:55:01.227 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:56:58.459 | Idle |  | ACCESS_DENIED
+  16:56:58.782 | Idle |  | ACCESS_DENIED
+  16:56:59.124 | Idle |  | ACCESS_DENIED
+  16:57:00.530 | Idle |  | ACCESS_DENIED
+  16:57:00.917 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:57:00.951 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:57:01.432 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:57:01.790 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:58:58.445 | Idle |  | ACCESS_DENIED
+  16:58:58.821 | Idle |  | ACCESS_DENIED
+  16:58:59.163 | Idle |  | ACCESS_DENIED
+  16:59:00.309 | Idle |  | ACCESS_DENIED
+  16:59:00.817 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:59:00.852 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:59:01.163 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  16:59:01.541 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe

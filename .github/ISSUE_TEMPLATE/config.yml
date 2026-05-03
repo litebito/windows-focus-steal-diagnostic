@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Norton Community discussions about this bug
+    url: https://community.norton.com/
+    about: For questions about Norton's product itself, please contact Norton directly. This repository documents a specific technical bug, but is not a Norton support channel.

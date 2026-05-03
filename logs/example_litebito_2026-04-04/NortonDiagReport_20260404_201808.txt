@@ -1,0 +1,193 @@
+﻿
+--- NORTON PROCESSES CURRENTLY RUNNING ---
+  PID=18044  NortonUI  Mem=41MB  Started=2026-04-03 21:14:54
+    Path: C:\Program Files\Norton\Suite\NortonUI.exe
+  PID=20716  NortonUI  Mem=33.4MB  Started=2026-04-03 21:14:54
+    Path: C:\Program Files\Norton\Suite\NortonUI.exe
+  PID=22188  NortonUI  Mem=181.9MB  Started=2026-04-03 21:14:23
+    Path: C:\Program Files\Norton\Suite\NortonUI.exe
+  PID=29984  NortonUI  Mem=43.4MB  Started=2026-04-03 21:14:54
+    Path: C:\Program Files\Norton\Suite\NortonUI.exe
+  PID=7568  VpnSvc  Mem=39.5MB  Started=2026-04-03 21:14:13
+    Path: C:\Program Files\Norton\Suite\VpnSvc.exe
+  ** OFFENDING PROCESS: NortonUI.exe (PID: 18044, 20716, 22188, 29984) **
+     This process owns the invisible CEF windows stealing focus.
+     Command Line: "C:\Program Files\Norton\Suite\NortonUI.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --field-trial-handle=6744,7695333553329553184,10253067258598065592,131072 --disable-features=CalculateNativeWinOcclusion,CookiesWithoutSameSiteMustBeSecure,SameSiteByDefaultCookies,SameSiteDefaultChecksMethodRigorously,WebRtcHideLocalIpsWithMdns --lang=en-GB --service-sandbox-type=none --no-sandbox --force-wave-audio --log-file="C:\Users\REDACTED\AppData\Roaming\Norton\Antivirus\log\cef_log.txt" --log-severity=error --user-agent="Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36 Avastium (0.0.0) (Windows 10.0)" --lang=en-BE --disable-webaudio --force-wave-audio --disable-software-rasterizer --no-sandbox --blacklist-accelerated-compositing --disable-accelerated-2d-canvas --disable-accelerated-compositing --disable-accelerated-layers --disable-accelerated-video-decode --blacklist-webgl --disable-bundled-ppapi-flash --disable-flash-3d --enable-aggressive-domstorage-flushing --enable-media-stream --disable-gpu --disable-webgl --disable-gpu-compositing --allow-file-access-from-files=1 --force-device-scale-factor=1.5 --pack_loading_disabled=1 --log-file="C:\Users\REDACTED\AppData\Roaming\Norton\Antivirus\log\cef_log.txt" --mojo-platform-channel-handle=6720 /prefetch:8
+     Parent PID: 22188
+     Parent Process: NortonUI (C:\Program Files\Norton\Suite\NortonUI.exe)
+     Command Line: "C:\Program Files\Norton\Suite\NortonUI.exe" --type=utility --utility-sub-type=storage.mojom.StorageService --field-trial-handle=6744,7695333553329553184,10253067258598065592,131072 --disable-features=CalculateNativeWinOcclusion,CookiesWithoutSameSiteMustBeSecure,SameSiteByDefaultCookies,SameSiteDefaultChecksMethodRigorously,WebRtcHideLocalIpsWithMdns --lang=en-GB --service-sandbox-type=utility --no-sandbox --force-wave-audio --log-file="C:\Users\REDACTED\AppData\Roaming\Norton\Antivirus\log\cef_log.txt" --log-severity=error --user-agent="Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36 Avastium (0.0.0) (Windows 10.0)" --lang=en-BE --disable-webaudio --force-wave-audio --disable-software-rasterizer --no-sandbox --blacklist-accelerated-compositing --disable-accelerated-2d-canvas --disable-accelerated-compositing --disable-accelerated-layers --disable-accelerated-video-decode --blacklist-webgl --disable-bundled-ppapi-flash --disable-flash-3d --enable-aggressive-domstorage-flushing --enable-media-stream --disable-gpu --disable-webgl --disable-gpu-compositing --allow-file-access-from-files=1 --force-device-scale-factor=1.5 --pack_loading_disabled=1 --log-file="C:\Users\REDACTED\AppData\Roaming\Norton\Antivirus\log\cef_log.txt" --mojo-platform-channel-handle=6180 /prefetch:8
+     Parent PID: 22188
+     Parent Process: NortonUI (C:\Program Files\Norton\Suite\NortonUI.exe)
+     Command Line: "C:\Program Files\Norton\Suite\NortonUI.exe" /nogui
+     Parent PID: 5988
+     Parent Process: EXITED (PID 5988)
+     Command Line: "C:\Program Files\Norton\Suite\NortonUI.exe" --type=gpu-process --field-trial-handle=6744,7695333553329553184,10253067258598065592,131072 --disable-features=CalculateNativeWinOcclusion,CookiesWithoutSameSiteMustBeSecure,SameSiteByDefaultCookies,SameSiteDefaultChecksMethodRigorously,WebRtcHideLocalIpsWithMdns --no-sandbox --disable-gpu-driver-bug-workarounds --log-file="C:\Users\REDACTED\AppData\Roaming\Norton\Antivirus\log\cef_log.txt" --log-severity=error --user-agent="Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36 Avastium (0.0.0) (Windows 10.0)" --lang=en-BE --disable-webaudio --force-wave-audio --disable-software-rasterizer --no-sandbox --blacklist-accelerated-compositing --disable-accelerated-2d-canvas --disable-accelerated-compositing --disable-accelerated-layers --disable-accelerated-video-decode --blacklist-webgl --disable-bundled-ppapi-flash --disable-flash-3d --enable-aggressive-domstorage-flushing --enable-media-stream --disable-gpu --disable-webgl --disable-gpu-compositing --allow-file-access-from-files=1 --force-device-scale-factor=1.5 --pack_loading_disabled=1 --gpu-preferences=SAAAAAAAAADgAABwAAAAAAAAAAAAAAAAAABgAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AAAAAAAAAHgAAAAAAAAAKAAAAAQAAAAgAAAAAAAAACgAAAAAAAAAMAAAAAAAAAA4AAAAAAAAABAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAAAAAAAGAAAAEAAAAAAAAAABAAAABQAAABAAAAAAAAAAAQAAAAYAAAAIAAAAAAAAAAgAAAAAAAAA --use-gl=swiftshader-webgl --log-file="C:\Users\REDACTED\AppData\Roaming\Norton\Antivirus\log\cef_log.txt" --mojo-platform-channel-handle=6820 /prefetch:2
+     Parent PID: 22188
+     Parent Process: NortonUI (C:\Program Files\Norton\Suite\NortonUI.exe)
+
+--- NORTON SCHEDULED TASKS ---
+  Task: \Norton\Norton 360 Patcher
+    State    : Ready
+    Last Run : 2026-04-04 17:14:14
+    Next Run : 2026-04-04 21:14:14
+    Trigger  : MSFT_TaskBootTrigger
+    Trigger  : MSFT_TaskTimeTrigger - REPEATS EVERY PT4H
+    Action   : C:\Program Files\Common Files\Norton\Icarus\norton-suite\icarus.exe /update:norton-suite /silent /only_patch
+  
+  Task: \Norton\Norton VPN Bug Report
+    State    : Ready
+    Last Run : 2026-04-03 09:00:00
+    Next Run : 2026-04-04 21:14:14
+    Trigger  : MSFT_TaskBootTrigger
+    Trigger  : MSFT_TaskDailyTrigger
+    Action   : C:\Program Files\Norton\Suite\AvBugReport.exe --send "dumps|report" --silent --product 187 --programpath "C:\Program Files\Norton\Suite" --configpath "C:\ProgramData\Norton\VPN" --path "C:\ProgramData\Norton\VPN\log" --path "C:\ProgramData\Norton\Icarus\Logs"  --logpath "C:\ProgramData\Norton\VPN\log" --guid 3c9ccaa8-ba7e-4c5e-998e-005c247e109d
+  
+  Task: \Norton\Overseer
+    State    : Ready
+    Last Run : 2026-04-03 09:00:00
+    Next Run : 2026-04-04 21:14:14
+    Trigger  : MSFT_TaskBootTrigger
+    Trigger  : MSFT_TaskDailyTrigger
+    Action   : C:\Program Files\Common Files\Norton\Overseer\overseer.exe /from_scheduler:1
+  
+  Task: \Norton\Suite Emergency Update
+    State    : Ready
+    Last Run : 2026-04-04 19:49:49
+    Next Run : 2026-04-04 23:49:49
+    Trigger  : MSFT_TaskDailyTrigger - REPEATS EVERY PT4H
+    Trigger  : MSFT_TaskBootTrigger
+    Trigger  : MSFT_TaskTimeTrigger
+    Action   : C:\Program Files\Norton\Suite\AvEmUpdate.exe 
+  
+
+--- NORTON SERVICES ---
+  Norton Antivirus [Running] - Norton Antivirus
+    Path: "C:\Program Files\Norton\Suite\NortonSvc.exe" /runassvc
+    Start: Auto | PID: 4980
+  Norton Firewall [Running] - Norton Firewall Service
+    Path: "C:\Program Files\Norton\Suite\afwServ.exe"
+    Start: Auto | PID: 6876
+  Norton Tools [Running] - Norton Tools
+    Path: "C:\Program Files\Norton\Suite\nllToolsSvc.exe" /runassvc
+    Start: Auto | PID: 5564
+  NortonVpn [Running] - Norton VPN
+    Path: "C:\Program Files\Norton\Suite\VpnSvc.exe"
+    Start: Auto | PID: 7568
+  NortonWscReporter [Running] - NortonWscReporter
+    Path: "C:\Program Files\Norton\Suite\wsc_proxy.exe" /runassvc /rpcserver
+    Start: Auto | PID: 3780
+
+--- NORTON REGISTRY SETTINGS ---
+  Found: HKLM:\SOFTWARE\Norton
+    Subkey: Anen
+    Subkey: Antivirus
+    Subkey: Icarus
+    Subkey: NotifyLimit
+    Subkey: OPM
+    Subkey: Products
+    Subkey: Subscriptions
+    Subkey: Suite
+    Subkey: TuneupSDK
+    Subkey: Utilities
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus -> BuildVersion = 26.3.10886
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\Backup\BackupSettings -> endpointRefreshPending = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\FwSettings\Firewall -> FirstNetworkGuid = {0DC656F0-BF31-467B-83DA-EC1CF921C073}
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\Scheduling\NortonToolService-FCFB76DC-1ABC-4319-A592-4B0CBD461637 -> CloudBackupInfoRefreshTask_enabled = 1
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\Scheduling\NortonToolService-FCFB76DC-1ABC-4319-A592-4B0CBD461637 -> CloudBackupInfoRefreshTask_232a2af0-8d26-4bb4-a85f-8c3a6e21c393 = {
+	"isInLocalTime" : "0",
+	"repetition" : "-1x fromStart 14400s",
+	"requirements" : "4",
+	"startDate" : "2026-04-04",
+	"startTime" : "18:45:53"
+}
+
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\ANEN -> ConnectivityStatus = 500
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\BrandingData -> RefreshTaskLastRun = 1774826342
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Cleaner -> NotifyEnabled = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> LaunchQuickScanAtStartup = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> PersistentCacheCertStatus = cbd88a3f17c69a5f0f514ca25fac93b3
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> MailNoteUpdated = 2
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> ProgUpdateToasterDisplayed = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> ProgUpdateToasterFirstTimeDisplayed = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> ProgUpdateNagFirstTimeDisplayed = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> AuidSentFor = 1a032a86
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> CanInstallMobileSecurityLastRefresh = 1775243694
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> CanInstallMobileSecurityRefreshed = fl=1057023;ias=3;rf=0;so=0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> LastSentSilentMode = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> BurgerHeartBeatSent = 1775319871
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> UIRenderer = CEF
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> VPSUpdateAvailable = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Common -> ProgramUpdateAvailable = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\GamingMode -> LastSuccessUpdateOfdndrules.dat = 1745627430
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\GamingMode -> LastUpdateCheckOfdndrules.dat = 1745627430
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\GamingMode -> LastSuccessUpdateOfdnddetection.dat = 1745627430
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\GamingMode -> LastUpdateCheckOfdnddetection.dat = 1745627430
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\Hns -> FirstNetworkGuid = {0DC656F0-BF31-467B-83DA-EC1CF921C073}
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\IDP -> LightningUpdateLastStatsTimestamp = 1775324325
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\IDP -> LightningUpdateStats = 
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\o2 -> RegImportStatusCode = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\semo -> LastForcedUpdate = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\UiStats -> GuiOpenedLast30Days = 1772799047 1773202007 1773806099 1774409746 1775012359 1775233746 1775326313
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\UiStats -> LastGuiOpenedTimestamp = 1775326313
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\UiStats -> LastGuiClosedTimestamp = 1775326408
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\settings\UiStats -> GuiOpened = 2304
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\usercfg\DriverUpdater -> LastUpdate = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\usercfg\SoftwareUpdater -> WindowsUpdates = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\properties\usercfg\SoftwareUpdater -> autoUpdate = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\Wsc -> IWscAVStatus4 = Norton 360
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\Wsc -> IWscASStatus = Norton 360
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Antivirus\Wsc -> IWscFWStatus2 = Norton 360
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Icarus\Dependencies\norton-av-vps\main -> norton-suite = 1
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Icarus\norton-suite -> ntbuildversion = 22631
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Suite -> BuildVersion = 26.3.10886
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Suite -> UpdateVersion = 973
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Suite -> MicroUpdates = 973=1775243773
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Suite\EmUpdatePending -> UpdateVersion = 973
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\Utilities\properties\usercfg\DriverUpdater -> LastUpdate = 0
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\VPN -> BuildVersion = 26.3.10886
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\VPN -> VersionBuild = 10886
+    INTERESTING: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Norton\VPN -> AnonymousGuid = a2dcedc8-883f-4183-bae8-5192c5cefaa3
+  Found: HKCU:\SOFTWARE\Norton
+    Subkey: Antivirus
+    Subkey: {0C55C096-0F1D-4F28-AAA2-85EF591126E7}
+
+--- NORTON COM / STARTUP ENTRIES ---
+  Startup: [HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run] NortonUI.exe = "C:\Program Files\Norton\Suite\AvLaunch.exe" /gui
+
+--- NORTON INSTALLATION INFO ---
+  NortonUI.exe Version: 26.3.10886.0
+    File Version  : 26.3.10886.0
+    Product Name  : Norton 360
+    Company       : Gen Digital Inc.
+    File Date     : 2026-03-31 07:49:07
+
+--- RECENT NORTON EVENT LOG ACTIVITY ---
+  No recent Norton events in Application log.
+
+--- RECOMMENDATIONS ---
+  1. QUICK TEST: Run this script with -KillNortonUI to kill the UI process
+     and confirm the focus stealing stops:
+       .\NortonFocusStealFix.ps1 -KillNortonUI
+  
+  2. NORTON SETTINGS: Open Norton 360 and go to:
+     Settings -> Administrative Settings -> Special Features
+     - Turn OFF 'Norton Notification Center'
+     - Turn OFF 'Special Offer Notification'
+     - Turn OFF 'Norton Community Watch'
+     Also check: Settings -> Administrative Settings -> Product Security
+     - Look for any auto-refresh or status check interval settings
+  
+  3. SILENT MODE: Enable Norton Silent Mode temporarily
+     Right-click Norton tray icon -> Enable Silent Mode
+     If focus stealing stops in Silent Mode, the culprit is
+     Norton's notification/status refresh system.
+  
+  4. NORTON UPDATE: Check for Norton product updates
+     This CEF focus-steal bug may be fixed in a newer version.
+  
+  5. FULL REGISTRY SCAN: Run with -FullReport for deep registry analysis:
+       .\NortonFocusStealFix.ps1 -FullReport
+  
+  6. NUCLEAR OPTION: If nothing else works, consider uninstalling
+     Norton 360 and using Windows Defender (built-in, no focus issues).
+

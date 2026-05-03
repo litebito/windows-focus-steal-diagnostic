@@ -1,0 +1,168 @@
+﻿===========================================================
+FOCUS-STEAL DIAGNOSTIC REPORT
+Generated: 2026-04-04 20:15:46
+Computer : REDACTED-PC
+User     : REDACTED
+Admin    : True
+Duration : 30 minutes
+===========================================================
+
+--- RUNNING SUSPECT PROCESSES AT START ---
+  [MEDIUM] PID=11016 AMDInstallManager - C:\Program Files\AMD\AMDInstallManager\AMDInstallManager.exe
+  [MEDIUM] PID=15292 AMDRSServ - C:\Program Files\AMD\CNext\CNext\AMDRSServ.exe
+  [MEDIUM] PID=49668 CrashPlanService - C:\Program Files\CrashPlan\CrashPlanService.exe
+  [HIGH] PID=14964 ctfmon - C:\WINDOWS\system32\ctfmon.exe
+  [MEDIUM] PID=11392 Dell.TechHub.Instrumentation.SubAgent - C:\Program Files\Dell\DTP\InstrumentationSubAgent\Dell.TechHub.Instrumentation.SubAgent.exe
+  [MEDIUM] PID=7040 Dell.TechHub.Instrumentation.UserProcess - C:\Program Files\Dell\DTP\InstrumentationSubAgent\Dell.TechHub.Instrumentation.UserProcess.exe
+  [MEDIUM] PID=41844 DesignStudioUI - C:\Program Files (x86)\Zebra Technologies\CardStudio2\DesignStudio\DesignStudioUI.exe
+  [MEDIUM] PID=31516 Greenshot - C:\Program Files\Greenshot\Greenshot.exe
+  [MEDIUM] PID=7452 LansweeperAgentService - C:\Program Files (x86)\LansweeperAgent\LansweeperAgentService.exe
+  [MEDIUM] PID=28496 LogiOptions - C:\Program Files\Logitech\LogiOptions\LogiOptions.exe
+  [MEDIUM] PID=18524 LogiOptionsMgr - C:\ProgramData\Logishrd\LogiOptions\Software\Current\LogiOptionsMgr.exe
+  [MEDIUM] PID=18292 logioptionsplus_agent - C:\Program Files\LogiOptionsPlus\logioptionsplus_agent.exe
+  [MEDIUM] PID=18088 logioptionsplus_appbroker - C:\Program Files\LogiOptionsPlus\logioptionsplus_appbroker.exe
+  [MEDIUM] PID=30456 logioptionsplus_updater - C:\Program Files\LogiOptionsPlus\logioptionsplus_updater.exe
+  [MEDIUM] PID=20628 LogiPluginService - C:\Program Files\Logi\LogiPluginService\LogiPluginService.exe
+  [MEDIUM] PID=33096 LogiPluginServiceExt - C:\Program Files\Logi\LogiPluginService\LogiPluginServiceExt.exe
+  [HIGH] PID=10036 Loupedeck - C:\Program Files (x86)\Loupedeck\Loupedeck2\configui2\Loupedeck.exe
+  [HIGH] PID=38732 Loupedeck - C:\Program Files (x86)\Loupedeck\Loupedeck2\configui2\Loupedeck.exe
+  [HIGH] PID=65300 Loupedeck - C:\Program Files (x86)\Loupedeck\Loupedeck2\configui2\Loupedeck.exe
+  [HIGH] PID=65668 Loupedeck - C:\Program Files (x86)\Loupedeck\Loupedeck2\configui2\Loupedeck.exe
+  [MEDIUM] PID=6428 mDNSResponder - C:\Program Files\Bonjour\mDNSResponder.exe
+  [MEDIUM] PID=56888 Microsoft.CmdPal.Ext.PowerToys - C:\Users\REDACTED\AppData\Local\PowerToys\Microsoft.CmdPal.Ext.PowerToys.exe
+  [MEDIUM] PID=42788 MigrationService - C:\Program Files (x86)\Samsung\Samsung Magician\MigrationService\MigrationService.exe
+  [MEDIUM] PID=26360 MouseAndKeyeventOnSystem - C:\Program Files\Dell\Dell Display and Peripheral Manager\Plugins\NKVM\DellDisplayManagerNetworkKVMService\MouseAndKeyeventOnSystem\MouseAndKeyeventOnSystem.exe
+  [MEDIUM] PID=4980 NortonSvc - 
+  [MEDIUM] PID=4980 NortonSvc - 
+  [MEDIUM] PID=18044 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=20716 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=22188 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=29984 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=7364 OneApp.IGCC.WinService - C:\WINDOWS\System32\DriverStore\FileRepository\igcc_dch.inf_amd64_734ca279c9cf8df2\OneApp.IGCC.WinService.exe
+  [MEDIUM] PID=33264 OpenConsole - C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.20211.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  [MEDIUM] PID=61528 OpenConsole - C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.20211.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  [MEDIUM] PID=46972 PowerToys - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.exe
+  [MEDIUM] PID=19960 PowerToys.AdvancedPaste - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.AdvancedPaste.exe
+  [MEDIUM] PID=21540 PowerToys.ColorPickerUI - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.ColorPickerUI.exe
+  [MEDIUM] PID=41636 PowerToys.CropAndLock - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.CropAndLock.exe
+  [MEDIUM] PID=57948 PowerToys.FancyZones - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.FancyZones.exe
+  [MEDIUM] PID=57948 PowerToys.FancyZones - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.FancyZones.exe
+  [MEDIUM] PID=20300 PowerToys.Peek.UI - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.Peek.UI.exe
+  [MEDIUM] PID=26848 PowerToys.PowerLauncher - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.PowerLauncher.exe
+  [MEDIUM] PID=52004 PowerToys.QuickAccess - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.QuickAccess.exe
+  [MEDIUM] PID=26896 PowerToys.Settings - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.Settings.exe
+  [MEDIUM] PID=8612 RadeonSoftware - C:\Program Files\AMD\CNext\CNext\Radeonsoftware.exe
+  [MEDIUM] PID=8612 RadeonSoftware - C:\Program Files\AMD\CNext\CNext\Radeonsoftware.exe
+  [LOW] PID=6192 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=12280 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=14632 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=15028 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=18756 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=25348 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=26356 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=39940 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=48300 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=62084 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [MEDIUM] PID=25968 SamsungMagicianSVC - C:\Program Files (x86)\Samsung\Samsung Magician\SamsungMagicianSVC.exe
+  [LOW] PID=14384 SearchHost - C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+  [LOW] PID=24848 ShellExperienceHost - C:\WINDOWS\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe
+  [MEDIUM] PID=10672 unsecapp - C:\WINDOWS\system32\wbem\unsecapp.exe
+  [MEDIUM] PID=16820 unsecapp - C:\WINDOWS\system32\wbem\unsecapp.exe
+  [MEDIUM] PID=7568 VpnSvc - C:\Program Files\Norton\Suite\VpnSvc.exe
+  [MEDIUM] PID=21176 WidgetService - C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntime_1.6.14.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe
+  [MEDIUM] PID=7604 WMIRegistrationService - C:\WINDOWS\System32\DriverStore\FileRepository\mewmiprov.inf_amd64_d51901c26227fb29\WMIRegistrationService.exe
+
+--- FOCUS CHANGE LOG ---
+[20:16:40.184] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:16:41.889] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:16:43.466] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:16:57.877] FOREGROUND | PID=11296 (explorer) | Class=CabinetWClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:16:58.467] FOREGROUND | PID=11296 (explorer) | Class=CabinetWClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:16:58.758] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[20:16:59.091] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:16:59.124] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[20:16:59.454] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:16:59.493] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:17:01.264] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:17:05.337] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:17:07.597] FOREGROUND | PID=11296 (explorer) | Class=CabinetWClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:17:07.907] FOREGROUND | PID=11296 (explorer) | Class=ShellTabWindowClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:17:11.484] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:17:15.618] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:17:15.653] FOREGROUND | PID=11296 (explorer) | Class=CabinetWClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:17:32.693] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:17:33.843] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:17:57.160] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:18:00.266] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:18:45.955] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:18:52.540] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:18:58.759] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[20:18:59.176] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:18:59.543] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:18:59.584] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[20:18:59.918] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:19:09.953] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:19:15.876] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:19:46.186] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:19:58.219] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:20:08.231] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:20:10.699] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:20:11.161] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:20:11.181] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[20:20:11.546] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:20:11.584] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[20:20:11.997] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:20:13.973] MINIMIZE_END | PID=69848 (Notepad) | Class=Notepad | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:20:14.024] FOREGROUND | PID=69848 (Notepad) | Class=Notepad | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:20:14.072] FOREGROUND | PID=11296 (explorer) | Class=CabinetWClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:20:18.417] FOREGROUND | PID=11296 (explorer) | Class=CabinetWClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:20:24.905] MINIMIZE_END | PID=4704 (firefox) | Class=MozillaWindowClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:48068)
+[20:20:24.968] FOREGROUND | PID=4704 (firefox) | Class=MozillaWindowClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:48068)
+[20:20:27.428] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[20:20:27.826] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[20:20:28.214] FOREGROUND | PID=4704 (firefox) | Class=MozillaWindowClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:48068)
+[20:20:28.518] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[20:20:28.552] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:20:28.874] FOREGROUND | PID=4704 (firefox) | Class=MozillaWindowClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:48068)
+[20:20:28.894] FOREGROUND | PID=0 (Idle) | Class= | Title= | Visible=False | Parent=(PID:0)
+[20:20:29.193] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:20:29.231] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[20:20:29.637] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:20:54.816] FOREGROUND | PID=11296 (explorer) | Class=CabinetWClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:21:00.301] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:21:08.903] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:21:11.871] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:22:00.882] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:22:05.328] FOREGROUND | PID=11296 (explorer) | Class=CabinetWClass | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:22:07.298] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:22:34.193] FOREGROUND | PID=11296 (explorer) | Class=TopLevelWindowForOverflowXamlIsland | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:22:34.227] FOREGROUND | PID=11296 (explorer) | Class=Shell_TrayWnd | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:22:35.517] FOREGROUND | PID=22188 (NortonUI) | Class=#32770 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:22:35.953] FOREGROUND | PID=22188 (NortonUI) | Class=nll_av_tray_icon_wndclass | Title=CNortonTrayIcon | Visible=False | Parent=EXITED(PID:5988)
+[20:22:38.906] FOREGROUND | PID=22188 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[20:22:41.613] FOREGROUND | PID=11296 (explorer) | Class=TopLevelWindowForOverflowXamlIsland | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:22:41.646] FOREGROUND | PID=11296 (explorer) | Class=Shell_TrayWnd | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:22:42.363] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[20:22:42.818] FOREGROUND | PID=22188 (NortonUI) | Class=nll_av_tray_icon_wndclass | Title=CNortonTrayIcon | Visible=False | Parent=EXITED(PID:5988)
+[20:22:42.851] FOREGROUND | PID=11296 (explorer) | Class=TopLevelWindowForOverflowXamlIsland | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:22:43.212] FOREGROUND | PID=22188 (NortonUI) | Class=#32770 | Title= | Visible=True | Parent=EXITED(PID:5988)
+[20:22:43.558] FOREGROUND | PID=22188 (NortonUI) | Class=Chrome_WidgetWin_0 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:22:58.517] FOREGROUND | PID=22188 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:5988)
+[20:22:58.557] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[20:23:01.467] FOREGROUND | PID=22188 (NortonUI) | Class=#32770 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:23:04.206] FOREGROUND | PID=22188 (NortonUI) | Class=nll_av_tray_icon_wndclass | Title=CNortonTrayIcon | Visible=False | Parent=EXITED(PID:5988)
+[20:23:04.245] FOREGROUND | PID=11296 (explorer) | Class=TopLevelWindowForOverflowXamlIsland | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:23:13.372] FOREGROUND | PID=22188 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:5988)
+[20:23:13.682] FOREGROUND | PID=22188 (NortonUI) | Class=#32770 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:23:13.718] FOREGROUND | PID=22188 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:5988)
+[20:23:58.185] FOREGROUND | PID=22188 (NortonUI) | Class=GeniumWindow | Title=Norton 360 | Visible=True | Parent=EXITED(PID:5988)
+[20:23:58.219] FOREGROUND | PID=22188 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5988)
+[20:24:35.391] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:26:54.213] FOREGROUND | PID=11296 (explorer) | Class=TopLevelWindowForOverflowXamlIsland | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:26:54.250] FOREGROUND | PID=11296 (explorer) | Class=Shell_TrayWnd | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:26:55.332] FOREGROUND | PID=22188 (NortonUI) | Class=#32770 | Title= | Visible=False | Parent=EXITED(PID:5988)
+[20:26:55.810] FOREGROUND | PID=22188 (NortonUI) | Class=nll_av_tray_icon_wndclass | Title=CNortonTrayIcon | Visible=False | Parent=EXITED(PID:5988)
+[20:27:08.328] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:27:08.370] FOREGROUND | PID=11296 (explorer) | Class=XamlExplorerHostIslandWindow | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:28:07.539] FOREGROUND | PID=65688 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+

@@ -1,0 +1,121 @@
+﻿===========================================================
+FOCUS-STEAL DIAGNOSTIC REPORT
+Generated: 2026-04-04 20:38:36
+Computer : REDACTED-PC
+User     : REDACTED
+Admin    : True
+Duration : 15 minutes
+===========================================================
+
+--- RUNNING SUSPECT PROCESSES AT START ---
+  [MEDIUM] PID=11016 AMDInstallManager - C:\Program Files\AMD\AMDInstallManager\AMDInstallManager.exe
+  [MEDIUM] PID=15292 AMDRSServ - C:\Program Files\AMD\CNext\CNext\AMDRSServ.exe
+  [MEDIUM] PID=49668 CrashPlanService - C:\Program Files\CrashPlan\CrashPlanService.exe
+  [HIGH] PID=14964 ctfmon - C:\WINDOWS\system32\ctfmon.exe
+  [MEDIUM] PID=11392 Dell.TechHub.Instrumentation.SubAgent - C:\Program Files\Dell\DTP\InstrumentationSubAgent\Dell.TechHub.Instrumentation.SubAgent.exe
+  [MEDIUM] PID=7040 Dell.TechHub.Instrumentation.UserProcess - C:\Program Files\Dell\DTP\InstrumentationSubAgent\Dell.TechHub.Instrumentation.UserProcess.exe
+  [MEDIUM] PID=41844 DesignStudioUI - C:\Program Files (x86)\Zebra Technologies\CardStudio2\DesignStudio\DesignStudioUI.exe
+  [MEDIUM] PID=31516 Greenshot - C:\Program Files\Greenshot\Greenshot.exe
+  [MEDIUM] PID=7452 LansweeperAgentService - C:\Program Files (x86)\LansweeperAgent\LansweeperAgentService.exe
+  [MEDIUM] PID=28496 LogiOptions - C:\Program Files\Logitech\LogiOptions\LogiOptions.exe
+  [MEDIUM] PID=18524 LogiOptionsMgr - C:\ProgramData\Logishrd\LogiOptions\Software\Current\LogiOptionsMgr.exe
+  [MEDIUM] PID=18292 logioptionsplus_agent - C:\Program Files\LogiOptionsPlus\logioptionsplus_agent.exe
+  [MEDIUM] PID=18088 logioptionsplus_appbroker - C:\Program Files\LogiOptionsPlus\logioptionsplus_appbroker.exe
+  [MEDIUM] PID=30456 logioptionsplus_updater - C:\Program Files\LogiOptionsPlus\logioptionsplus_updater.exe
+  [MEDIUM] PID=20628 LogiPluginService - C:\Program Files\Logi\LogiPluginService\LogiPluginService.exe
+  [MEDIUM] PID=33096 LogiPluginServiceExt - C:\Program Files\Logi\LogiPluginService\LogiPluginServiceExt.exe
+  [HIGH] PID=10036 Loupedeck - C:\Program Files (x86)\Loupedeck\Loupedeck2\configui2\Loupedeck.exe
+  [HIGH] PID=38732 Loupedeck - C:\Program Files (x86)\Loupedeck\Loupedeck2\configui2\Loupedeck.exe
+  [HIGH] PID=65300 Loupedeck - C:\Program Files (x86)\Loupedeck\Loupedeck2\configui2\Loupedeck.exe
+  [HIGH] PID=65668 Loupedeck - C:\Program Files (x86)\Loupedeck\Loupedeck2\configui2\Loupedeck.exe
+  [MEDIUM] PID=6428 mDNSResponder - C:\Program Files\Bonjour\mDNSResponder.exe
+  [MEDIUM] PID=56888 Microsoft.CmdPal.Ext.PowerToys - C:\Users\REDACTED\AppData\Local\PowerToys\Microsoft.CmdPal.Ext.PowerToys.exe
+  [MEDIUM] PID=42788 MigrationService - C:\Program Files (x86)\Samsung\Samsung Magician\MigrationService\MigrationService.exe
+  [MEDIUM] PID=26360 MouseAndKeyeventOnSystem - C:\Program Files\Dell\Dell Display and Peripheral Manager\Plugins\NKVM\DellDisplayManagerNetworkKVMService\MouseAndKeyeventOnSystem\MouseAndKeyeventOnSystem.exe
+  [MEDIUM] PID=4980 NortonSvc - 
+  [MEDIUM] PID=4980 NortonSvc - 
+  [MEDIUM] PID=7364 OneApp.IGCC.WinService - C:\WINDOWS\System32\DriverStore\FileRepository\igcc_dch.inf_amd64_734ca279c9cf8df2\OneApp.IGCC.WinService.exe
+  [MEDIUM] PID=4124 OpenConsole - C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.20211.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  [MEDIUM] PID=24260 OpenConsole - C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.20211.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  [MEDIUM] PID=57052 OpenConsole - C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.20211.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  [MEDIUM] PID=46972 PowerToys - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.exe
+  [MEDIUM] PID=19960 PowerToys.AdvancedPaste - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.AdvancedPaste.exe
+  [MEDIUM] PID=21540 PowerToys.ColorPickerUI - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.ColorPickerUI.exe
+  [MEDIUM] PID=41636 PowerToys.CropAndLock - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.CropAndLock.exe
+  [MEDIUM] PID=57948 PowerToys.FancyZones - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.FancyZones.exe
+  [MEDIUM] PID=57948 PowerToys.FancyZones - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.FancyZones.exe
+  [MEDIUM] PID=20300 PowerToys.Peek.UI - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.Peek.UI.exe
+  [MEDIUM] PID=26848 PowerToys.PowerLauncher - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.PowerLauncher.exe
+  [MEDIUM] PID=52004 PowerToys.QuickAccess - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.QuickAccess.exe
+  [MEDIUM] PID=26896 PowerToys.Settings - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.Settings.exe
+  [MEDIUM] PID=8612 RadeonSoftware - C:\Program Files\AMD\CNext\CNext\Radeonsoftware.exe
+  [MEDIUM] PID=8612 RadeonSoftware - C:\Program Files\AMD\CNext\CNext\Radeonsoftware.exe
+  [LOW] PID=6192 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=12280 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=14632 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=15028 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=18756 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=25348 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=26356 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=39940 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=48300 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=62084 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [MEDIUM] PID=25968 SamsungMagicianSVC - C:\Program Files (x86)\Samsung\Samsung Magician\SamsungMagicianSVC.exe
+  [LOW] PID=14384 SearchHost - C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+  [LOW] PID=24848 ShellExperienceHost - C:\WINDOWS\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe
+  [MEDIUM] PID=10672 unsecapp - C:\WINDOWS\system32\wbem\unsecapp.exe
+  [MEDIUM] PID=16820 unsecapp - C:\WINDOWS\system32\wbem\unsecapp.exe
+  [MEDIUM] PID=7568 VpnSvc - C:\Program Files\Norton\Suite\VpnSvc.exe
+  [MEDIUM] PID=21176 WidgetService - C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntime_1.6.14.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe
+  [MEDIUM] PID=7604 WMIRegistrationService - C:\WINDOWS\System32\DriverStore\FileRepository\mewmiprov.inf_amd64_d51901c26227fb29\WMIRegistrationService.exe
+
+--- FOCUS CHANGE LOG ---
+[20:38:40.671] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:38:40.742] FOREGROUND | PID=11296 (explorer) | Class=Shell_TrayWnd | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:38:45.321] FOREGROUND | PID=62788 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:39:03.146] MINIMIZE_END | PID=39212 (WhatsApp.Root) | Class=WinUIDesktopWin32WindowClass | Title=WhatsApp | Visible=True | Parent=svchost(PID:1740)
+[20:39:03.451] FOREGROUND | PID=39212 (WhatsApp.Root) | Class=WinUIDesktopWin32WindowClass | Title=WhatsApp | Visible=True | Parent=svchost(PID:1740)
+[20:39:17.810] FOREGROUND | PID=53352 (ApplicationFrameHost) | Class=ApplicationFrameWindow | Title=Calculator | Visible=True | Parent=svchost(PID:1740)
+[20:39:20.198] FOREGROUND | PID=11296 (explorer) | Class=Shell_TrayWnd | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:39:36.326] FOREGROUND | PID=39212 (WhatsApp.Root) | Class=WinUIDesktopWin32WindowClass | Title=WhatsApp | Visible=True | Parent=svchost(PID:1740)
+[20:40:17.886] FOREGROUND | PID=53352 (ApplicationFrameHost) | Class=ApplicationFrameWindow | Title=Calculator | Visible=True | Parent=svchost(PID:1740)
+[20:40:26.937] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:41:25.993] FOREGROUND | PID=69848 (Notepad) | Class=Notepad | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:41:27.698] MINIMIZE_END | PID=39212 (WhatsApp.Root) | Class=WinUIDesktopWin32WindowClass | Title=WhatsApp | Visible=True | Parent=svchost(PID:1740)
+[20:41:27.737] FOREGROUND | PID=39212 (WhatsApp.Root) | Class=WinUIDesktopWin32WindowClass | Title=WhatsApp | Visible=True | Parent=svchost(PID:1740)
+[20:41:31.548] MINIMIZE_END | PID=12732 (Taskmgr) | Class=TaskManagerWindow | Title=Task Manager | Visible=True | Parent=explorer(PID:11296)
+[20:41:31.586] FOREGROUND | PID=12732 (Taskmgr) | Class=TaskManagerWindow | Title=Task Manager | Visible=True | Parent=explorer(PID:11296)
+[20:41:31.618] FOREGROUND | PID=11296 (explorer) | Class=Shell_TrayWnd | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:41:32.320] FOREGROUND | PID=39212 (WhatsApp.Root) | Class=WinUIDesktopWin32WindowClass | Title=WhatsApp | Visible=True | Parent=svchost(PID:1740)
+[20:41:32.771] FOREGROUND | PID=53352 (ApplicationFrameHost) | Class=ApplicationFrameWindow | Title=Calculator | Visible=True | Parent=svchost(PID:1740)
+[20:41:32.805] FOREGROUND | PID=11296 (explorer) | Class=Shell_TrayWnd | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:10584)
+[20:41:34.836] FOREGROUND | PID=39212 (WhatsApp.Root) | Class=WinUIDesktopWin32WindowClass | Title=WhatsApp | Visible=True | Parent=svchost(PID:1740)
+[20:47:40.532] FOREGROUND | PID=53352 (ApplicationFrameHost) | Class=ApplicationFrameWindow | Title=Calculator | Visible=True | Parent=svchost(PID:1740)
+[20:47:41.632] FOREGROUND | PID=62788 (WindowsTerminal) | Class=CASCADIA_HOSTING_WINDOW_CLASS | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+[20:47:59.735] FOREGROUND | PID=52128 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=explorer(PID:11296)
+
+===========================================================
+SUMMARY
+===========================================================
+Total events         : 23
+Rapid focus changes  : 12
+
+EVENTS BY PROCESS:
+  WhatsApp.Root                  : 7
+  ApplicationFrameHost           : 4
+  explorer                       : 4
+  chrome                         : 3
+  Taskmgr                        : 2
+  WindowsTerminal                : 2
+  Notepad                        : 1
+
+EVENTS BY WINDOW CLASS:
+  WinUIDesktopWin32WindowClass   : 7
+  ApplicationFrameWindow         : 4
+  Shell_TrayWnd                  : 4
+  Chrome_WidgetWin_1             : 3
+  TaskManagerWindow              : 2
+  CASCADIA_HOSTING_WINDOW_CLASS  : 2
+  Notepad                        : 1
+
+INVISIBLE WINDOW EVENTS:

@@ -1,0 +1,144 @@
+﻿===========================================================
+FOCUS-STEAL DIAGNOSTIC REPORT
+Generated: 2026-04-15 09:32:42
+Admin    : True
+Duration : 30 minutes
+===========================================================
+
+--- RUNNING SUSPECT PROCESSES AT START ---
+  [MEDIUM] PID=49532 AMDInstallManager - C:\Program Files\AMD\AMDInstallManager\AMDInstallManager.exe
+  [MEDIUM] PID=34112 AMDRSServ - C:\Program Files\AMD\CNext\CNext\AMDRSServ.exe
+  [HIGH] PID=18576 ctfmon - C:\WINDOWS\system32\ctfmon.exe
+  [MEDIUM] PID=7084 mDNSResponder - C:\Program Files\Bonjour\mDNSResponder.exe
+  [MEDIUM] PID=9128 Microsoft.CmdPal.Ext.PowerToys - C:\Users\REDACTED\AppData\Local\PowerToys\Microsoft.CmdPal.Ext.PowerToys.exe
+  [MEDIUM] PID=4732 NortonSvc - 
+  [MEDIUM] PID=4732 NortonSvc - 
+  [MEDIUM] PID=14108 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=22860 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=24436 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=31012 NortonUI - C:\Program Files\Norton\Suite\NortonUI.exe
+  [MEDIUM] PID=7396 OneApp.IGCC.WinService - C:\WINDOWS\System32\DriverStore\FileRepository\igcc_dch.inf_amd64_734ca279c9cf8df2\OneApp.IGCC.WinService.exe
+  [MEDIUM] PID=53592 OpenConsole - C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.20211.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  [MEDIUM] PID=59088 OpenConsole - C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.20211.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  [MEDIUM] PID=16164 PowerToys - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.exe
+  [MEDIUM] PID=7108 PowerToys.AdvancedPaste - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.AdvancedPaste.exe
+  [MEDIUM] PID=6956 PowerToys.ColorPickerUI - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.ColorPickerUI.exe
+  [MEDIUM] PID=16796 PowerToys.CropAndLock - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.CropAndLock.exe
+  [MEDIUM] PID=17328 PowerToys.FancyZones - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.FancyZones.exe
+  [MEDIUM] PID=17328 PowerToys.FancyZones - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.FancyZones.exe
+  [MEDIUM] PID=21928 PowerToys.Peek.UI - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.Peek.UI.exe
+  [MEDIUM] PID=22164 PowerToys.PowerLauncher - C:\Users\REDACTED\AppData\Local\PowerToys\PowerToys.PowerLauncher.exe
+  [MEDIUM] PID=16308 PowerToys.QuickAccess - C:\Users\REDACTED\AppData\Local\PowerToys\WinUI3Apps\PowerToys.QuickAccess.exe
+  [MEDIUM] PID=22696 RadeonSoftware - C:\Program Files\AMD\CNext\CNext\Radeonsoftware.exe
+  [MEDIUM] PID=22696 RadeonSoftware - C:\Program Files\AMD\CNext\CNext\Radeonsoftware.exe
+  [LOW] PID=15472 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=15872 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=16128 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=19220 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=19292 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=28600 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=39440 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=40300 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=44452 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=46064 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=48584 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=53844 RuntimeBroker - C:\Windows\System32\RuntimeBroker.exe
+  [LOW] PID=14632 SearchHost - C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+  [LOW] PID=28252 ShellExperienceHost - C:\WINDOWS\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe
+  [MEDIUM] PID=10480 unsecapp - C:\WINDOWS\system32\wbem\unsecapp.exe
+  [MEDIUM] PID=24312 unsecapp - C:\WINDOWS\system32\wbem\unsecapp.exe
+  [MEDIUM] PID=7452 VpnSvc - C:\Program Files\Norton\Suite\VpnSvc.exe
+  [MEDIUM] PID=24304 WidgetService - C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntime_1.6.14.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe
+  [MEDIUM] PID=7440 WMIRegistrationService - C:\WINDOWS\System32\DriverStore\FileRepository\mewmiprov.inf_amd64_d51901c26227fb29\WMIRegistrationService.exe
+
+--- FOCUS CHANGE LOG ---
+[09:32:44.759] FOREGROUND | PID=43912 (chrome) | Class=Chrome_WidgetWin_1 | Title=[REDACTED-TITLE] | Visible=True | Parent=EXITED(PID:52832)
+[09:33:56.648] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:37:45.102] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:41:50.676] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:43:01.514] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:44:04.186] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:45:06.508] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:45:22.202] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:47:07.382] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:47:24.190] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:48:45.042] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:49:08.217] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:49:45.119] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:52:09.736] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:52:26.202] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:53:56.235] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:55:11.014] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[09:55:27.455] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[10:00:12.081] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[10:00:28.627] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+[10:01:45.224] FOREGROUND | PID=24436 (NortonUI) | Class=CefHeaderWindow | Title=Norton 360 | Visible=False | Parent=EXITED(PID:5752)
+
+===========================================================
+SUMMARY
+===========================================================
+Total events         : 59
+Rapid focus changes  : 0
+
+EVENTS BY PROCESS:
+  NortonUI                       : 35
+  RemoteDesktopManager           : 9
+  chrome                         : 4
+  explorer                       : 2
+  WindowsTerminal                : 2
+  LockApp                        : 1
+  SyncFolders                    : 1
+  OUTLOOK                        : 1
+  Idle                           : 1
+
+EVENTS BY WINDOW CLASS:
+  CefHeaderWindow                : 32
+  WindowsForms10.Window.8.app.0.3d893c_r3_ad1 : 9
+  Chrome_WidgetWin_1             : 7
+  Shell_TrayWnd                  : 2
+  CASCADIA_HOSTING_WINDOW_CLASS  : 2
+  Chrome_WidgetWin_0             : 2
+  Windows.UI.Core.CoreWindow     : 1
+                                 : 1
+  GeniumDialog                   : 1
+  WindowsForms10.Window.8.app.0.141b42a_r7_ad1 : 1
+  WindowsForms10.Window.8.app.0.25bbc1c_r74_ad3 : 1
+
+INVISIBLE WINDOW EVENTS:
+  00:35:46.759 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  00:37:45.198 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  00:43:45.352 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  00:49:45.664 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  00:55:45.624 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  01:01:45.779 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:00:01.484 | OUTLOOK | WindowsForms10.Window.8.app.0.25bbc1c_r74_ad3 | C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE
+  09:01:45.523 | Idle |  | ACCESS_DENIED
+  09:01:45.988 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:01:46.008 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:01:46.236 | NortonUI | Chrome_WidgetWin_0 | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:07:45.707 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:13:45.393 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:19:16.396 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:19:45.727 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:25:45.439 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:33:56.648 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:37:45.102 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:41:50.676 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:43:01.514 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:44:04.186 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:45:06.508 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:45:22.202 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:47:07.382 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:47:24.190 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:48:45.042 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:49:08.217 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:49:45.119 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:52:09.736 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:52:26.202 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:53:56.235 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:55:11.014 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  09:55:27.455 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  10:00:12.081 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  10:00:28.627 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+  10:01:45.224 | NortonUI | CefHeaderWindow | C:\Program Files\Norton\Suite\NortonUI.exe
+
